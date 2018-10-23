@@ -23,5 +23,11 @@ namespace eNutrideal_desktop
             new CalculadoraCalorias().Show();
             
         }
+
+        private void button_peso_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CalculadoraPesoIdeal().Show();
+        }
     }
 }

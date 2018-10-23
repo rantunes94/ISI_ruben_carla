@@ -52,6 +52,12 @@
     <Compile Include="CalculadoraCalorias.Designer.cs">
       <DependentUpon>CalculadoraCalorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculadoraPesoIdeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadoraPesoIdeal.Designer.cs">
+      <DependentUpon>CalculadoraPesoIdeal.cs</DependentUpon>
+    </Compile>
     <Compile Include="eNutrideal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CalculadoraCalorias.resx">
       <DependentUpon>CalculadoraCalorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadoraPesoIdeal.resx">
+      <DependentUpon>CalculadoraPesoIdeal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="eNutrideal.resx">
       <DependentUpon>eNutrideal.cs</DependentUpon>

@@ -54,6 +54,7 @@
             this.button_peso.TabIndex = 1;
             this.button_peso.Text = "Calculadora de Peso Ideal";
             this.button_peso.UseVisualStyleBackColor = true;
+            this.button_peso.Click += new System.EventHandler(this.button_peso_Click);
             // 
             // button_gestor
             // 

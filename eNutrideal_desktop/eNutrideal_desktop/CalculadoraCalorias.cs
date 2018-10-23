@@ -75,9 +75,6 @@ namespace eNutrideal_desktop
 
                 }
 
-
-            
-
             if (comboBox_genero.Text.Equals("Masculino"))
             {
                 
