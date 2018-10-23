@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace eNutrideal_desktop
 {
-    public partial class Form1 : Form
+    public partial class eNutrideal : Form
     {
-        public Form1()
+        public eNutrideal()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CalculadoraCalorias().Show();
+            
         }
     }
 }
