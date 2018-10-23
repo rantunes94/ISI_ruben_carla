@@ -41,6 +41,9 @@
             this.button_calcular = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox_resultado = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -49,9 +52,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(92, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Idade";
+            this.label1.Text = "Idade(19-78)";
             // 
             // label2
             // 
@@ -69,9 +72,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(92, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Altura";
+            this.label3.Text = "Altura(cm)";
             // 
             // label4
             // 
@@ -79,9 +82,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(92, 191);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 20);
+            this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Peso";
+            this.label4.Text = "Peso(kg)";
             // 
             // label5
             // 
@@ -140,18 +143,18 @@
             // button_calcular
             // 
             this.button_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_calcular.Location = new System.Drawing.Point(95, 263);
+            this.button_calcular.Location = new System.Drawing.Point(96, 272);
             this.button_calcular.Name = "button_calcular";
             this.button_calcular.Size = new System.Drawing.Size(84, 27);
             this.button_calcular.TabIndex = 12;
-            this.button_calcular.Text = "Calcular!";
+            this.button_calcular.Text = "Calcular";
             this.button_calcular.UseVisualStyleBackColor = true;
             this.button_calcular.Click += new System.EventHandler(this.button_calcular_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(209, 263);
+            this.button1.Location = new System.Drawing.Point(211, 272);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 27);
             this.button1.TabIndex = 13;
@@ -165,15 +168,45 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(92, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(232, 24);
+            this.label6.Size = new System.Drawing.Size(311, 24);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Calculadora de Calorias";
+            this.label6.Text = "Calculadora de Calorias(por dia)";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(92, 325);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(390, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Para fazer manutenção do seu peso deverá consumir ";
+            // 
+            // textBox_resultado
+            // 
+            this.textBox_resultado.Location = new System.Drawing.Point(488, 327);
+            this.textBox_resultado.Name = "textBox_resultado";
+            this.textBox_resultado.Size = new System.Drawing.Size(62, 20);
+            this.textBox_resultado.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(554, 325);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 20);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "calorias por dia";
             // 
             // CalculadoraCalorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox_resultado);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_calcular);
@@ -210,5 +243,8 @@
         private System.Windows.Forms.Button button_calcular;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox_resultado;
+        private System.Windows.Forms.Label label8;
     }
 }

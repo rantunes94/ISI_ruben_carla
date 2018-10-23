@@ -50,9 +50,73 @@ namespace eNutrideal_desktop
             new eNutrideal().Show();
         }
 
+
+
+        private void textbox_idade_Validating(object sender, CancelEventArgs e)
+        {
+            if (Convert.ToInt32(textBox_idade.Text) > 78 && Convert.ToInt32(textBox_idade.Text)<19)
+                e.Cancel = true;
+        }
+
         private void button_calcular_Click(object sender, EventArgs e)
         {
+            // Men 10 x weight(kg) +6.25 x height(cm) – 5 x age(y) +5
+            //Women 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) – 161.
+            int idade = Int32.Parse(textBox_idade.Text);
+            double peso = Convert.ToDouble(textBox_peso.Text);
+            int altura = Convert.ToInt32(textBox_altura.Text);
+            double resultado_incompleto = 0;
+            double resultado_final = 0;
+            String nivelAtividade = comboBox_atividadeFisica.Text;
 
+                if (Convert.ToInt32(textBox_idade.Text) > 78 && Convert.ToInt32(textBox_idade.Text) < 19)
+                {
+                    MessageBox.Show("A idade tem de estar compreendida entre os 19 e os 78 anos");
+
+                }
+
+
+            
+
+            if (comboBox_genero.Text.Equals("Masculino"))
+            {
+                
+                resultado_incompleto = 10 * peso + 6.25 * altura - 5 * idade + 5;
+
+                //10xpeso +6.25 x altura – 5 x idade + 5;
+            }
+            else
+            {
+                resultado_incompleto = 10 * peso +6.25 * altura - 5 * idade - 161;
+            }
+
+
+            if (nivelAtividade.Equals("Sedentário"))
+            {
+                resultado_final = resultado_incompleto * 1.2;
+            }
+
+            if (nivelAtividade.Equals("Ligeiramente Ativo(a)"))
+            {
+                resultado_final = resultado_incompleto * 1.375;
+            }
+
+            if (nivelAtividade.Equals("Moderadamente Ativo(a)"))
+            {
+                resultado_final = resultado_incompleto * 1.550;
+            }
+
+            if (nivelAtividade.Equals("Muito Ativo(a)"))
+            {
+                resultado_final = resultado_incompleto * 1.725;
+            }
+
+            if (nivelAtividade.Equals("Extraordinariamente Ativo(a)"))
+            {
+                resultado_final = resultado_incompleto * 1.9;
+            }
+
+            textBox_resultado.Text = Convert.ToString(resultado_final);
         }
 
         private void comboBox_genero_SelectedIndexChanged(object sender, EventArgs e)
