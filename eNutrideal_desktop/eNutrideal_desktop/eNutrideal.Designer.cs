@@ -65,6 +65,7 @@
             this.button_gestor.TabIndex = 2;
             this.button_gestor.Text = " Gestor de Informação Calórica de Refeições fast food";
             this.button_gestor.UseVisualStyleBackColor = true;
+            this.button_gestor.Click += new System.EventHandler(this.button_gestor_Click);
             // 
             // label1
             // 

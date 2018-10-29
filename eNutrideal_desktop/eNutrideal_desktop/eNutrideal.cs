@@ -29,5 +29,11 @@ namespace eNutrideal_desktop
             this.Hide();
             new CalculadoraPesoIdeal().Show();
         }
+
+        private void button_gestor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Gestor().Show();
+        }
     }
 }
