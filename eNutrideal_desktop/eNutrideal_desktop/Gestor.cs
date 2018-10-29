@@ -60,5 +60,11 @@ namespace eNutrideal_desktop
                 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new eNutrideal().Show();
+        }
     }
 }
