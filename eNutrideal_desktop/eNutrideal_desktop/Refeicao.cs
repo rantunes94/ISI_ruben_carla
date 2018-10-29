@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace eNutrideal_desktop
 {
-    class Refeicao
+    public class Refeicao
     {
         public Refeicao(string restaurante, string item, string quantidade, string calorias)
         {

@@ -8,23 +8,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace eNutrideal_desktop
 {
     public partial class Gestor : Form
     {
-        
+
+        private static JsonReader file;
+
         public Gestor()
         {
             InitializeComponent();
+            
+
         }
 
-        public object JsonConvert { get; private set; }
+        public static T Deserialize<T>(string json)
+        {
+           return JsonConvert.DeserializeObject<T>(json);
+        }
+
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "json files (*.json)|*.json|All files (*.*)|*.*";
+            openFileDialog1.Filter = "json files (*.json)|*.json";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
 
@@ -36,26 +46,19 @@ namespace eNutrideal_desktop
 
                 string nome = openFileDialog1.FileName;
 
+                //Neste caso esta vai ser a minha String Json
                 texto = File.ReadAllText(nome);
-            }
 
 
-            /*
+                //Deserialize the JSON text to an Refeicao list.
+                var myobjList =  Deserialize<List<Refeicao>>(texto);
 
-
-            //Deserialize the JSON text to an Employee list.
-            var myobjList = JsonConvert.DeserializeObject<List<Refeicao>>(nome);
-
-            //Print the resulting Employee list to the console
-            Console.WriteLine("The content of the JSON file deserialized is: \n");
-            foreach (var refeicao in myobjList)
-            {
-                Console.WriteLine(employee);
+                foreach (var refeicao in myobjList)
+                {
+                    richTextBox1.Text = richTextBox1.Text +"\n" + Convert.ToString(refeicao);
+                }
                 
             }
-            Console.ReadLine();
-            */
-
         }
     }
 }
