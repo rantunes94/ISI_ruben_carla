@@ -67,10 +67,8 @@ namespace eNutrideal_desktop
                 if (extension.Equals(".txt"))
                 {
                     richTextBox1.Clear();
-                    List<string> fileLines = File.ReadAllLines(nome).ToList();
-
-                    /*
-                    List<Refeicao> refeicoes = new List<Refeicao>();
+                    // este bloco de código só funciona para o calorias_restaurantes_1.txt
+                    //List<Refeicao> refeicoes = new List<Refeicao>();
                     using (StreamReader sr = new StreamReader(nome))
                     {
                         while (sr.Peek() >= 0)
@@ -79,17 +77,20 @@ namespace eNutrideal_desktop
                             string[] strArray;
                             str = sr.ReadLine();
 
-                            strArray = str.Split(',');
+                            strArray = str.Split('\t');
                             Refeicao currentRefeicao = new Refeicao();
                             currentRefeicao.restaurante = strArray[0];
-                            //currentBook.BookName = strArray[1];
-                            //currentBook.bookPrice = double.parse(strArray[2]);
-                            //currentBook.bookCode = int.parse(strArray[3]);
+                            currentRefeicao.item = strArray[1];
+                            currentRefeicao.quantidade = strArray[2];
+                            currentRefeicao.calorias = strArray[3];
 
-                            //Refeicao.add(currentBook);
+
+                            richTextBox1.Text = richTextBox1.Text +"\n"+ currentRefeicao.restaurante + "\t" +  currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
                         }
                     }
-                    */
+                    //FIM de "este bloco de código só funciona para o calorias_restaurantes_1.txt"
+
+
                 }
             }
         }

@@ -13,7 +13,7 @@ namespace eNutrideal_desktop
         {
         }
 
-        public Refeicao(string restaurante, string item, string quantidade, int calorias)
+        public Refeicao(string restaurante, string item, string quantidade, string calorias)
         {
             this.restaurante = restaurante;
             this.item = item;
@@ -24,7 +24,7 @@ namespace eNutrideal_desktop
         public string restaurante { get; set; }
         public string item { get; set; }
         public string quantidade { get; set; }
-        public int calorias { get; set; }
+        public string calorias { get; set; }
 
         public override string ToString()
         {
