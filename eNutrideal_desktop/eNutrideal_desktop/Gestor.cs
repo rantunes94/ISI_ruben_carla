@@ -100,5 +100,10 @@ namespace eNutrideal_desktop
             this.Hide();
             new eNutrideal().Show();
         }
+
+        private void Gestor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
