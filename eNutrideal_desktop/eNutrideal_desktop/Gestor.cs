@@ -69,7 +69,7 @@ namespace eNutrideal_desktop
                     richTextBox1.Clear();
                     List<string> fileLines = File.ReadAllLines(nome).ToList();
 
-
+                    /*
                     List<Refeicao> refeicoes = new List<Refeicao>();
                     using (StreamReader sr = new StreamReader(nome))
                     {
@@ -87,11 +87,9 @@ namespace eNutrideal_desktop
                             //currentBook.bookCode = int.parse(strArray[3]);
 
                             //Refeicao.add(currentBook);
-
-
-
                         }
                     }
+                    */
                 }
             }
         }
