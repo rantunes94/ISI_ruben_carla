@@ -6,8 +6,10 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using Newtonsoft.Json;
 
 namespace eNutrideal_desktop
@@ -66,29 +68,73 @@ namespace eNutrideal_desktop
 
                 if (extension.Equals(".txt"))
                 {
+
+                    
+                    string characterEspecial = @"\t";
+                    string characterEspecial2 = @"\§";
+                    Regex regex1 = new Regex(characterEspecial, RegexOptions.IgnoreCase);
+                    Regex regex2 = new Regex(characterEspecial2, RegexOptions.IgnoreCase);
+
                     richTextBox1.Clear();
-                    // este bloco de código só funciona para o calorias_restaurantes_1.txt
-                    //List<Refeicao> refeicoes = new List<Refeicao>();
-                    using (StreamReader sr = new StreamReader(nome))
+                   
+                    using (StreamReader sr = new StreamReader(nome, Encoding.Default))
                     {
+
+                        
                         while (sr.Peek() >= 0)
                         {
                             string str;
                             string[] strArray;
+                            
                             str = sr.ReadLine();
 
-                            strArray = str.Split('\t');
-                            Refeicao currentRefeicao = new Refeicao();
-                            currentRefeicao.restaurante = strArray[0];
-                            currentRefeicao.item = strArray[1];
-                            currentRefeicao.quantidade = strArray[2];
-                            currentRefeicao.calorias = strArray[3];
+                            Match match1 = regex1.Match(str);
+                            string resultString = Convert.ToString(match1);
+
+                            // este bloco de código só funciona para o calorias_restaurantes_1.txt  
+                            if (resultString.Equals("\t")) {
+                                strArray = str.Split('\t');
+                                Refeicao currentRefeicao = new Refeicao();
+
+                                currentRefeicao.restaurante = strArray[0];
+                                currentRefeicao.item = strArray[1];
+                                currentRefeicao.quantidade = strArray[2];
+                                currentRefeicao.calorias = strArray[3];                      
+                                richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
+                            }
+                            //FIM de "este bloco de código só funciona para o calorias_restaurantes_1.txt"
 
 
-                            richTextBox1.Text = richTextBox1.Text +"\n"+ currentRefeicao.restaurante + "\t" +  currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
+                            // Por completar 
+                            else
+                            {
+                                Match match2 = regex2.Match(str);
+                                string resultString2 = Convert.ToString(match2);
+                                str.Replace('§', '\n');
+
+                                strArray = str.Split('|');
+                                //strArray = str.Split(new char[] { '|', '§' });
+
+                               
+                               
+
+                                //string replacedCharacter = Regex.Replace(resultString2, "§", "\n");
+ 
+
+                               
+                                Refeicao currentRefeicao = new Refeicao();
+
+                                currentRefeicao.restaurante = strArray[0];
+                                currentRefeicao.item = strArray[1];
+                                currentRefeicao.quantidade = strArray[2];
+                                currentRefeicao.calorias = strArray[3];
+
+                                richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
+                            }
+  
                         }
                     }
-                    //FIM de "este bloco de código só funciona para o calorias_restaurantes_1.txt"
+                   
 
 
                 }
@@ -104,6 +150,26 @@ namespace eNutrideal_desktop
         private void Gestor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        //para criar documento XML 
+        private void createNode(string restaurante, string item, string quantidade, string calorias,
+            XmlTextWriter writer)
+        {
+            writer.WriteStartElement("restaurante");
+            writer.WriteStartElement("restaurante");
+            writer.WriteString(restaurante);
+            writer.WriteEndElement();
+            writer.WriteStartElement("item");
+            writer.WriteString(item);
+            writer.WriteEndElement();
+            writer.WriteStartElement("quantidade");
+            writer.WriteString(quantidade);
+            writer.WriteEndElement();
+            writer.WriteStartElement("calorias");
+            writer.WriteString(calorias);
+            writer.WriteEndElement();
+            writer.WriteEndElement();
         }
     }
 }
