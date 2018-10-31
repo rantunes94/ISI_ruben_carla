@@ -110,28 +110,76 @@ namespace eNutrideal_desktop
                             {
                                 Match match2 = regex2.Match(str);
                                 string resultString2 = Convert.ToString(match2);
-                                str.Replace('§', '\n');
+                                string strReplaced = str.Replace('§', '\n');
+                                string strReplaced2 = strReplaced.Replace("|", "\t");
+                                strArray = new[] { strReplaced2 };
+                                //strArray = strReplaced2.Split('\t');
+                                strReplaced2.Split('\t');
 
-                                strArray = str.Split('|');
+                                richTextBox1.Text = richTextBox1.Text + strReplaced2;
+
+
+                                /*
+                                System.IO.File.WriteAllText(@"C:\Users\Ruben\Desktop\InterS\ProjAnexos\WriteText.txt", strReplaced2);
+                                string caminhoFicheiro =@"C:\Users\Ruben\Desktop\InterS\ProjAnexos\WriteText.txt";
+
+                                string ficheiro =
+                                    File.ReadAllText(caminhoFicheiro);
+
+
+
+         
+
+                                using (StreamReader sr2 = new StreamReader(caminhoFicheiro, Encoding.Default))
+                                {
+                                    while (sr2.Peek() >= 0)
+                                    {
+                                        string str2;
+                                        string[] strArray2;
+
+                                        str2 = sr2.ReadLine();
+
+                                        strArray2 = str.Split('\t');
+                                        Refeicao currentRefeicao = new Refeicao();
+
+                                        currentRefeicao.restaurante = strArray2[0];
+                                        currentRefeicao.item = strArray2[1];
+                                        currentRefeicao.quantidade = strArray2[2];
+                                        currentRefeicao.calorias = strArray2[3];
+                                        richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
+                                    }
+                                }
+                                */
+
+                                //richTextBox1.Text = richTextBox1.Text + strReplaced2;
+
+                                // str.Split('|');
+                                //Console.WriteLine(strReplaced);
+
+                                // string[] strSplited = strReplaced.Split("|");
+                                //strArray = str.Split('|');
+
+
+                                // strReplaced2 = string.Join("\t", strArray);
+
+
+
                                 //strArray = str.Split(new char[] { '|', '§' });
-
-                               
-                               
-
                                 //string replacedCharacter = Regex.Replace(resultString2, "§", "\n");
- 
 
-                               
+
+                                /*
                                 Refeicao currentRefeicao = new Refeicao();
-
                                 currentRefeicao.restaurante = strArray[0];
                                 currentRefeicao.item = strArray[1];
                                 currentRefeicao.quantidade = strArray[2];
                                 currentRefeicao.calorias = strArray[3];
 
                                 richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
+                                */
+
                             }
-  
+
                         }
                     }
                    
