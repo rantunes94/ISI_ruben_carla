@@ -119,6 +119,18 @@ namespace eNutrideal_desktop
                                 richTextBox1.Text = richTextBox1.Text + strReplaced2;
 
 
+                                using (System.IO.StringReader reader = new System.IO.StringReader(strReplaced2))
+                                {
+                                    string line = reader.ReadLine();
+
+                                    foreach (var l in line)
+                                    {
+                                        richTextBox1.Text = richTextBox1.Text + "\n" + l;
+                                    }
+                                }
+
+
+                              
                                 /*
                                 System.IO.File.WriteAllText(@"C:\Users\Ruben\Desktop\InterS\ProjAnexos\WriteText.txt", strReplaced2);
                                 string caminhoFicheiro =@"C:\Users\Ruben\Desktop\InterS\ProjAnexos\WriteText.txt";
