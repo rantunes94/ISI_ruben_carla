@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace eNutrideal_desktop
 {
-    class Refeicao
+    public class Refeicao
     {
+        public Refeicao()
+        {
+        }
+
         public Refeicao(string restaurante, string item, string quantidade, string calorias)
         {
             this.restaurante = restaurante;
@@ -16,10 +21,10 @@ namespace eNutrideal_desktop
             this.calorias = calorias;
         }
 
-        public string restaurante { get; }
-        public string item { get; }
-        public string quantidade { get; }
-        public string calorias { get; }
+        public string restaurante { get; set; }
+        public string item { get; set; }
+        public string quantidade { get; set; }
+        public string calorias { get; set; }
 
         public override string ToString()
         {
