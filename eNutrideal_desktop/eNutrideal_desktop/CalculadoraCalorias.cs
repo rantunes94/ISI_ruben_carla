@@ -73,7 +73,7 @@ namespace eNutrideal_desktop
             /*    if ( idade > 78 && idade < 19)
                 {
                     MessageBox.Show("A idade tem de estar compreendida entre os 19 e os 78 anos" + );
-
+                    cenass
                 }
             */
             if (comboBox_genero.Text.Equals("Masculino"))
