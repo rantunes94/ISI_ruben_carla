@@ -36,7 +36,10 @@ namespace eNutrideal_desktop
 
         public override string ToString()
         {
-            return "Restaurante: " + restaurante + "\t" + "Item: "+item + "\t" +"Quantidade: " +quantidade + "\t" + "Calorias: "+calorias + "\t";
+            return "Restaurante: " + restaurante + "\t" 
+                + "Item: "+item + "\t" 
+                +"Quantidade: " +quantidade + "\t" 
+                + "Calorias: "+calorias + "\t";
         }
     }
 }
