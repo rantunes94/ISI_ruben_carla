@@ -78,6 +78,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(691, 302);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // button2
             // 
@@ -128,10 +129,11 @@
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(27, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(759, 18);
+            this.label2.Size = new System.Drawing.Size(760, 18);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Bem vindo ao Gestor de Documentos , aqui puderá adicionar o conteúdo dos seus doc" +
+            this.label2.Text = "Bem vindo ao Gestor de Documentos , aqui poderá adicionar o conteúdo dos seus doc" +
     "umentos à base de dados.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // GestorDocumentos
             // 

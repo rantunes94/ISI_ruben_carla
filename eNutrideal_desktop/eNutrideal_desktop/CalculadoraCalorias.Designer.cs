@@ -33,9 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox_idade = new System.Windows.Forms.TextBox();
-            this.textBox_altura = new System.Windows.Forms.TextBox();
-            this.textBox_peso = new System.Windows.Forms.TextBox();
             this.comboBox_atividadeFisica = new System.Windows.Forms.ComboBox();
             this.comboBox_genero = new System.Windows.Forms.ComboBox();
             this.button_calcular = new System.Windows.Forms.Button();
@@ -44,6 +41,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_resultado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDown_idade = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_altura = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_peso = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_idade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_altura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_peso)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,30 +98,6 @@
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Género";
-            // 
-            // textBox_idade
-            // 
-            this.textBox_idade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_idade.Location = new System.Drawing.Point(277, 86);
-            this.textBox_idade.Name = "textBox_idade";
-            this.textBox_idade.Size = new System.Drawing.Size(100, 26);
-            this.textBox_idade.TabIndex = 7;
-            // 
-            // textBox_altura
-            // 
-            this.textBox_altura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_altura.Location = new System.Drawing.Point(277, 156);
-            this.textBox_altura.Name = "textBox_altura";
-            this.textBox_altura.Size = new System.Drawing.Size(100, 26);
-            this.textBox_altura.TabIndex = 8;
-            // 
-            // textBox_peso
-            // 
-            this.textBox_peso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_peso.Location = new System.Drawing.Point(277, 191);
-            this.textBox_peso.Name = "textBox_peso";
-            this.textBox_peso.Size = new System.Drawing.Size(100, 26);
-            this.textBox_peso.TabIndex = 9;
             // 
             // comboBox_atividadeFisica
             // 
@@ -199,11 +178,67 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "calorias por dia";
             // 
+            // numericUpDown_idade
+            // 
+            this.numericUpDown_idade.Location = new System.Drawing.Point(277, 89);
+            this.numericUpDown_idade.Maximum = new decimal(new int[] {
+            78,
+            0,
+            0,
+            0});
+            this.numericUpDown_idade.Minimum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.numericUpDown_idade.Name = "numericUpDown_idade";
+            this.numericUpDown_idade.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_idade.TabIndex = 18;
+            this.numericUpDown_idade.Value = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.numericUpDown_idade.ValueChanged += new System.EventHandler(this.numericUpDown_idade_ValueChanged);
+            // 
+            // numericUpDown_altura
+            // 
+            this.numericUpDown_altura.Location = new System.Drawing.Point(277, 159);
+            this.numericUpDown_altura.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.numericUpDown_altura.Name = "numericUpDown_altura";
+            this.numericUpDown_altura.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_altura.TabIndex = 19;
+            // 
+            // numericUpDown_peso
+            // 
+            this.numericUpDown_peso.DecimalPlaces = 1;
+            this.numericUpDown_peso.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            196608});
+            this.numericUpDown_peso.Location = new System.Drawing.Point(277, 191);
+            this.numericUpDown_peso.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.numericUpDown_peso.Name = "numericUpDown_peso";
+            this.numericUpDown_peso.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_peso.TabIndex = 20;
+            // 
             // CalculadoraCalorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numericUpDown_peso);
+            this.Controls.Add(this.numericUpDown_altura);
+            this.Controls.Add(this.numericUpDown_idade);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox_resultado);
             this.Controls.Add(this.label7);
@@ -212,9 +247,6 @@
             this.Controls.Add(this.button_calcular);
             this.Controls.Add(this.comboBox_genero);
             this.Controls.Add(this.comboBox_atividadeFisica);
-            this.Controls.Add(this.textBox_peso);
-            this.Controls.Add(this.textBox_altura);
-            this.Controls.Add(this.textBox_idade);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -223,6 +255,9 @@
             this.Name = "CalculadoraCalorias";
             this.Text = "eNutrideal";
             this.Load += new System.EventHandler(this.CalculadoraCalorias_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_idade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_altura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_peso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,9 +270,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox_idade;
-        private System.Windows.Forms.TextBox textBox_altura;
-        private System.Windows.Forms.TextBox textBox_peso;
         private System.Windows.Forms.ComboBox comboBox_atividadeFisica;
         private System.Windows.Forms.ComboBox comboBox_genero;
         private System.Windows.Forms.Button button_calcular;
@@ -246,5 +278,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_resultado;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown numericUpDown_idade;
+        private System.Windows.Forms.NumericUpDown numericUpDown_altura;
+        private System.Windows.Forms.NumericUpDown numericUpDown_peso;
     }
 }

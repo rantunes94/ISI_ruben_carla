@@ -51,8 +51,8 @@ namespace eNutrideal_desktop
 
         private void button_calcular_Click(object sender, EventArgs e)
         {
-            int idade = Int32.Parse(textBox_idade.Text);
-            int altura = Convert.ToInt32(textBox_altura.Text);
+            int idade = Convert.ToInt32(numericUpDown_idade.Value);
+            int altura = Convert.ToInt32(numericUpDown_altura.Value);
             double resultado_final = 0;
             //Robinson Formula:
             //Men: Ideal Body Weight(kg) = 52 kg + 1.9 kg per inch over 5 feet.
@@ -84,6 +84,21 @@ namespace eNutrideal_desktop
             }
 
             textBox_resultado.Text = Convert.ToString(resultado_final);
+
+        }
+
+        private void textBox_idade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown_idade_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
