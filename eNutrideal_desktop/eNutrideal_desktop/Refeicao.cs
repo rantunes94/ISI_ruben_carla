@@ -9,6 +9,17 @@ namespace eNutrideal_desktop
 {
     public class Refeicao
     {
+
+        public string restaurante { get; set; }
+        public string item { get; set; }
+        public string quantidade { get; set; }
+        public string calorias { get; set; }
+
+        public static List<string> listRestaurantes = new List<string>();
+        public static List<string> listItems = new List<string>();
+        public static List<string> listQuantidades = new List<string>();
+        public static List<string> listCalorias = new List<string>();
+
         public Refeicao()
         {
         }
@@ -21,10 +32,7 @@ namespace eNutrideal_desktop
             this.calorias = calorias;
         }
 
-        public string restaurante { get; set; }
-        public string item { get; set; }
-        public string quantidade { get; set; }
-        public string calorias { get; set; }
+        
 
         public override string ToString()
         {
