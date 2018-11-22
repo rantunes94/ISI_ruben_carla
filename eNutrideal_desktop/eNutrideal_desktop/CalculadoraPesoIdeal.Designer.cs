@@ -89,9 +89,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(83, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Idade(19-78)";
+            this.label1.Text = "Idade";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
@@ -146,28 +146,23 @@
             // 
             this.numericUpDown_idade.Location = new System.Drawing.Point(268, 93);
             this.numericUpDown_idade.Maximum = new decimal(new int[] {
-            78,
-            0,
-            0,
-            0});
-            this.numericUpDown_idade.Minimum = new decimal(new int[] {
-            19,
+            120,
             0,
             0,
             0});
             this.numericUpDown_idade.Name = "numericUpDown_idade";
             this.numericUpDown_idade.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown_idade.TabIndex = 27;
-            this.numericUpDown_idade.Value = new decimal(new int[] {
-            19,
-            0,
-            0,
-            0});
             this.numericUpDown_idade.ValueChanged += new System.EventHandler(this.numericUpDown_idade_ValueChanged);
             // 
             // numericUpDown_altura
             // 
             this.numericUpDown_altura.Location = new System.Drawing.Point(268, 166);
+            this.numericUpDown_altura.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
             this.numericUpDown_altura.Name = "numericUpDown_altura";
             this.numericUpDown_altura.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown_altura.TabIndex = 28;

@@ -53,11 +53,12 @@ namespace eNutrideal_desktop
         {
             int idade = Convert.ToInt32(numericUpDown_idade.Value);
             int altura = Convert.ToInt32(numericUpDown_altura.Value);
+            string genero = comboBox_genero.Text;
             double resultado_final = 0;
             //Robinson Formula:
             //Men: Ideal Body Weight(kg) = 52 kg + 1.9 kg per inch over 5 feet.
             //Women: Ideal Body Weight(kg) = 49 kg + 1.7 kg per inch over 5 feet.
-            if (comboBox_genero.Text.Equals("Masculino"))
+            if (genero.Equals("Masculino"))
             {
 
                 if (altura <= 152.4)
@@ -70,7 +71,7 @@ namespace eNutrideal_desktop
                 }
             }
 
-            if (comboBox_genero.Text.Equals("Feminino"))
+            if (genero.Equals("Feminino"))
             {
 
                 if (altura <= 152.4)
@@ -86,6 +87,8 @@ namespace eNutrideal_desktop
             textBox_resultado.Text = Convert.ToString(resultado_final);
 
         }
+
+        
 
         private void textBox_idade_TextChanged(object sender, EventArgs e)
         {

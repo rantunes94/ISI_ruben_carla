@@ -65,9 +65,10 @@ namespace eNutrideal_desktop
             int idade = Convert.ToInt32(numericUpDown_idade.Value);
             double peso = Convert.ToDouble(numericUpDown_peso.Value);
             int altura = Convert.ToInt32(numericUpDown_altura.Value);
+            string genero = comboBox_genero.Text;
             double resultado_incompleto = 0;
             double resultado_final = 0;
-            String nivelAtividade = comboBox_atividadeFisica.Text;
+            string nivelAtividade = comboBox_atividadeFisica.Text;
 
             //OPERADOR && NÃO FUNCIONA - PERGUNTAR AO PROF
             /*    if ( idade > 78 && idade < 19)
@@ -76,7 +77,7 @@ namespace eNutrideal_desktop
                     cenass
                 }
             */
-            if (comboBox_genero.Text.Equals("Masculino"))
+            if (genero.Equals("Masculino"))
             {
                 
                 resultado_incompleto = 10 * peso + 6.25 * altura - 5 * idade + 5;
