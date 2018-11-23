@@ -226,18 +226,23 @@ namespace eNutrideal_desktop
             XmlTextWriter writer)
         {
             writer.WriteStartElement("refeicao");
-            writer.WriteStartElement("restaurante");
-            writer.WriteString(restaurante);
-            writer.WriteEndElement();
-            writer.WriteStartElement("item");
-            writer.WriteString(item);
-            writer.WriteEndElement();
-            writer.WriteStartElement("quantidade");
-            writer.WriteString(quantidade);
-            writer.WriteEndElement();
-            writer.WriteStartElement("calorias");
-            writer.WriteString(calorias);
-            writer.WriteEndElement();
+
+                writer.WriteStartElement("restaurante");
+                writer.WriteString(restaurante);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("item");
+                writer.WriteString(item);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("quantidade");
+                writer.WriteString(quantidade);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("calorias");
+                writer.WriteString(calorias);
+                writer.WriteEndElement();
+
             writer.WriteEndElement();
         }
 
@@ -253,7 +258,8 @@ namespace eNutrideal_desktop
             writer.WriteStartDocument(true);
             writer.Formatting = System.Xml.Formatting.Indented;
             writer.Indentation = 2;
-            writer.WriteStartElement("refeicoes");
+                 writer.WriteStartElement("refeicoes");
+           // writer.WriteStartElement("refeicao");
 
             for (int i = 0; i <= Refeicao.listRestaurantes.Count - 1; i++)
             {
@@ -277,6 +283,16 @@ namespace eNutrideal_desktop
         private void button5_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

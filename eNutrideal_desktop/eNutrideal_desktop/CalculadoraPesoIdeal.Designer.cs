@@ -30,8 +30,6 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox_genero = new System.Windows.Forms.ComboBox();
-            this.textBox_altura = new System.Windows.Forms.TextBox();
-            this.textBox_idade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +38,10 @@
             this.textBox_resultado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown_idade = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_altura = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_idade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_altura)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -56,26 +58,10 @@
             // 
             this.comboBox_genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_genero.FormattingEnabled = true;
-            this.comboBox_genero.Location = new System.Drawing.Point(268, 129);
+            this.comboBox_genero.Location = new System.Drawing.Point(268, 126);
             this.comboBox_genero.Name = "comboBox_genero";
             this.comboBox_genero.Size = new System.Drawing.Size(121, 28);
             this.comboBox_genero.TabIndex = 21;
-            // 
-            // textBox_altura
-            // 
-            this.textBox_altura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_altura.Location = new System.Drawing.Point(268, 163);
-            this.textBox_altura.Name = "textBox_altura";
-            this.textBox_altura.Size = new System.Drawing.Size(100, 26);
-            this.textBox_altura.TabIndex = 20;
-            // 
-            // textBox_idade
-            // 
-            this.textBox_idade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_idade.Location = new System.Drawing.Point(268, 93);
-            this.textBox_idade.Name = "textBox_idade";
-            this.textBox_idade.Size = new System.Drawing.Size(100, 26);
-            this.textBox_idade.TabIndex = 19;
             // 
             // label5
             // 
@@ -106,6 +92,7 @@
             this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "Idade";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -155,19 +142,44 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "*baseado na fórmula de Robinson (1983)";
             // 
+            // numericUpDown_idade
+            // 
+            this.numericUpDown_idade.Location = new System.Drawing.Point(268, 93);
+            this.numericUpDown_idade.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.numericUpDown_idade.Name = "numericUpDown_idade";
+            this.numericUpDown_idade.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_idade.TabIndex = 27;
+            this.numericUpDown_idade.ValueChanged += new System.EventHandler(this.numericUpDown_idade_ValueChanged);
+            // 
+            // numericUpDown_altura
+            // 
+            this.numericUpDown_altura.Location = new System.Drawing.Point(268, 166);
+            this.numericUpDown_altura.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.numericUpDown_altura.Name = "numericUpDown_altura";
+            this.numericUpDown_altura.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_altura.TabIndex = 28;
+            // 
             // CalculadoraPesoIdeal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numericUpDown_altura);
+            this.Controls.Add(this.numericUpDown_idade);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox_resultado);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_calcular);
             this.Controls.Add(this.comboBox_genero);
-            this.Controls.Add(this.textBox_altura);
-            this.Controls.Add(this.textBox_idade);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -175,6 +187,8 @@
             this.Name = "CalculadoraPesoIdeal";
             this.Text = "eNutrideal";
             this.Load += new System.EventHandler(this.CalculadoraPesoIdeal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_idade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_altura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,8 +198,6 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox_genero;
-        private System.Windows.Forms.TextBox textBox_altura;
-        private System.Windows.Forms.TextBox textBox_idade;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -194,5 +206,7 @@
         private System.Windows.Forms.TextBox textBox_resultado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown numericUpDown_idade;
+        private System.Windows.Forms.NumericUpDown numericUpDown_altura;
     }
 }

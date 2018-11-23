@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eNutrideal_desktop.ServiceReference1;
 
 namespace eNutrideal_desktop
 {
@@ -52,30 +53,40 @@ namespace eNutrideal_desktop
 
 
 
-        private void textbox_idade_Validating(object sender, CancelEventArgs e)
-        {
-            if (Convert.ToInt32(textBox_idade.Text) > 78 && Convert.ToInt32(textBox_idade.Text)<19)
-                e.Cancel = true;
-        }
+        //private void textbox_idade_Validating(object sender, CancelEventArgs e)
+        //{
+        //    if (Convert.ToInt32(textBox_idade.Text) > 78 && Convert.ToInt32(textBox_idade.Text)<19)
+        //        e.Cancel = true;
+        //}
 
         private void button_calcular_Click(object sender, EventArgs e)
         {
             // Men 10 x weight(kg) +6.25 x height(cm) – 5 x age(y) +5
             //Women 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) – 161.
-            int idade = Int32.Parse(textBox_idade.Text);
-            double peso = Convert.ToDouble(textBox_peso.Text);
-            int altura = Convert.ToInt32(textBox_altura.Text);
+            int idade = Convert.ToInt32(numericUpDown_idade.Value);
+            double peso = Convert.ToDouble(numericUpDown_peso.Value);
+            int altura = Convert.ToInt32(numericUpDown_altura.Value);
+            string genero = comboBox_genero.Text;
             double resultado_incompleto = 0;
-            double resultado_final = 0;
-            String nivelAtividade = comboBox_atividadeFisica.Text;
+           
+            string nivelAtividade = comboBox_atividadeFisica.Text;
 
-                if (Convert.ToInt32(textBox_idade.Text) > 78 && Convert.ToInt32(textBox_idade.Text) < 19)
+            ServiceENutridealClient client = new ServiceENutridealClient();
+            double resultado_final = client.calcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
+            textBox_resultado.Text = Convert.ToString(resultado_final);
+
+            //OPERADOR && NÃO FUNCIONA - PERGUNTAR AO PROF
+            /*    if ( idade > 78 && idade < 19)
                 {
-                    MessageBox.Show("A idade tem de estar compreendida entre os 19 e os 78 anos");
-
+                    MessageBox.Show("A idade tem de estar compreendida entre os 19 e os 78 anos" + );
+                    cenass
                 }
+            */
 
-            if (comboBox_genero.Text.Equals("Masculino"))
+
+
+            /*
+            if (genero.Equals("Masculino"))
             {
                 
                 resultado_incompleto = 10 * peso + 6.25 * altura - 5 * idade + 5;
@@ -114,6 +125,7 @@ namespace eNutrideal_desktop
             }
 
             textBox_resultado.Text = Convert.ToString(resultado_final);
+            */
         }
 
         private void comboBox_genero_SelectedIndexChanged(object sender, EventArgs e)
@@ -134,6 +146,16 @@ namespace eNutrideal_desktop
             // Display the Value property
             Item itm = (Item)comboBox_genero.SelectedItem;
             Console.WriteLine("{0}", itm.Name);
+        }
+
+        private void textBox_idade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown_idade_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
