@@ -133,6 +133,18 @@ namespace eNutrideal_desktop.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
         System.Threading.Tasks.Task ApagarRefeicaoPorItemAsync(string item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/calcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/calcularPesoIdealResponse")]
+        double calcularPesoIdeal(int idade, int altura, string genero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/calcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/calcularPesoIdealResponse")]
+        System.Threading.Tasks.Task<double> calcularPesoIdealAsync(int idade, int altura, string genero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/calcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/calcularCaloriasDiaResponse")]
+        double calcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/calcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/calcularCaloriasDiaResponse")]
+        System.Threading.Tasks.Task<double> calcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -192,6 +204,22 @@ namespace eNutrideal_desktop.ServiceReference1 {
         
         public System.Threading.Tasks.Task ApagarRefeicaoPorItemAsync(string item) {
             return base.Channel.ApagarRefeicaoPorItemAsync(item);
+        }
+        
+        public double calcularPesoIdeal(int idade, int altura, string genero) {
+            return base.Channel.calcularPesoIdeal(idade, altura, genero);
+        }
+        
+        public System.Threading.Tasks.Task<double> calcularPesoIdealAsync(int idade, int altura, string genero) {
+            return base.Channel.calcularPesoIdealAsync(idade, altura, genero);
+        }
+        
+        public double calcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade) {
+            return base.Channel.calcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
+        }
+        
+        public System.Threading.Tasks.Task<double> calcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade) {
+            return base.Channel.calcularCaloriasDiaAsync(idade, genero, altura, peso, nivelAtividade);
         }
     }
 }

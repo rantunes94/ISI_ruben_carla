@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eNutrideal_desktop.ServiceReference1;
 
 namespace eNutrideal_desktop
 {
@@ -67,8 +68,12 @@ namespace eNutrideal_desktop
             int altura = Convert.ToInt32(numericUpDown_altura.Value);
             string genero = comboBox_genero.Text;
             double resultado_incompleto = 0;
-            double resultado_final = 0;
+           
             string nivelAtividade = comboBox_atividadeFisica.Text;
+
+            ServiceENutridealClient client = new ServiceENutridealClient();
+            double resultado_final = client.calcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
+            textBox_resultado.Text = Convert.ToString(resultado_final);
 
             //OPERADOR && NÃO FUNCIONA - PERGUNTAR AO PROF
             /*    if ( idade > 78 && idade < 19)
@@ -77,6 +82,10 @@ namespace eNutrideal_desktop
                     cenass
                 }
             */
+
+
+
+            /*
             if (genero.Equals("Masculino"))
             {
                 
@@ -116,6 +125,7 @@ namespace eNutrideal_desktop
             }
 
             textBox_resultado.Text = Convert.ToString(resultado_final);
+            */
         }
 
         private void comboBox_genero_SelectedIndexChanged(object sender, EventArgs e)

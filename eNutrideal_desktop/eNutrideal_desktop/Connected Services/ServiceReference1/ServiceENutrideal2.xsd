@@ -51,4 +51,38 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="calcularPesoIdeal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idade" type="xs:int" />
+        <xs:element minOccurs="0" name="altura" type="xs:int" />
+        <xs:element minOccurs="0" name="genero" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="calcularPesoIdealResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="calcularPesoIdealResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="calcularCaloriasDia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idade" type="xs:int" />
+        <xs:element minOccurs="0" name="genero" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="altura" type="xs:int" />
+        <xs:element minOccurs="0" name="peso" type="xs:double" />
+        <xs:element minOccurs="0" name="nivelAtividade" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="calcularCaloriasDiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="calcularCaloriasDiaResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

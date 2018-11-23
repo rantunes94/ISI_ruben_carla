@@ -201,18 +201,23 @@ namespace eNutrideal_desktop
             XmlTextWriter writer)
         {
             writer.WriteStartElement("refeicao");
-            writer.WriteStartElement("restaurante");
-            writer.WriteString(restaurante);
-            writer.WriteEndElement();
-            writer.WriteStartElement("item");
-            writer.WriteString(item);
-            writer.WriteEndElement();
-            writer.WriteStartElement("quantidade");
-            writer.WriteString(quantidade);
-            writer.WriteEndElement();
-            writer.WriteStartElement("calorias");
-            writer.WriteString(calorias);
-            writer.WriteEndElement();
+
+                writer.WriteStartElement("restaurante");
+                writer.WriteString(restaurante);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("item");
+                writer.WriteString(item);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("quantidade");
+                writer.WriteString(quantidade);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("calorias");
+                writer.WriteString(calorias);
+                writer.WriteEndElement();
+
             writer.WriteEndElement();
         }
 
@@ -222,13 +227,14 @@ namespace eNutrideal_desktop
             { 
             XmlTextWriter writer = new XmlTextWriter(@"C:\WINDOWS\TEMP\WriteText.xml", Encoding.UTF8);
 
-            string pathRestaurantes = @"C:\WINDOWS\TEMP\WriteText.xml";
+            //string pathRestaurantes = @"C:\WINDOWS\TEMP\WriteText.xml";
 
 
             writer.WriteStartDocument(true);
             writer.Formatting = System.Xml.Formatting.Indented;
             writer.Indentation = 2;
-            writer.WriteStartElement("refeicoes");
+                 writer.WriteStartElement("refeicoes");
+           // writer.WriteStartElement("refeicao");
 
             for (int i = 0; i <= Refeicao.listRestaurantes.Count - 1; i++)
             {

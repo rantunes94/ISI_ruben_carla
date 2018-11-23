@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eNutrideal_desktop.ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace eNutrideal_desktop
 {
     public partial class CalculadoraPesoIdeal : Form
     {
+       
 
         private class Item
         {
@@ -52,12 +54,22 @@ namespace eNutrideal_desktop
         private void button_calcular_Click(object sender, EventArgs e)
         {
             int idade = Convert.ToInt32(numericUpDown_idade.Value);
+
             int altura = Convert.ToInt32(numericUpDown_altura.Value);
             string genero = comboBox_genero.Text;
-            double resultado_final = 0;
+
+        
+            ServiceENutridealClient client = new ServiceENutridealClient();
+            double resultado_final = client.calcularPesoIdeal(idade, altura, genero);
+            textBox_resultado.Text = Convert.ToString(resultado_final);
+
+            //double resultado_final = 0;
             //Robinson Formula:
             //Men: Ideal Body Weight(kg) = 52 kg + 1.9 kg per inch over 5 feet.
             //Women: Ideal Body Weight(kg) = 49 kg + 1.7 kg per inch over 5 feet.
+
+
+            /*
             if (genero.Equals("Masculino"))
             {
 
@@ -85,6 +97,8 @@ namespace eNutrideal_desktop
             }
 
             textBox_resultado.Text = Convert.ToString(resultado_final);
+            */
+
 
         }
 
