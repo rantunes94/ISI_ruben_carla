@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="acb61389-8334-43c6-aa68-5b97b723bc57" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53005/ServiceENutrideal.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceENutrideal.disco" MetadataType="Disco" ID="085bf752-7aa6-4640-a214-68fec27d8d83" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?disco" />
+    <MetadataFile FileName="ServiceENutrideal.xsd" MetadataType="Schema" ID="47088172-23f4-41d6-88e7-e704511ec518" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceENutrideal.wsdl" MetadataType="Wsdl" ID="cdba77de-4bb6-44af-97ea-842500d363e2" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?wsdl" />
+    <MetadataFile FileName="ServiceENutrideal1.xsd" MetadataType="Schema" ID="1ca2ee68-b0bc-4974-8c6c-04135e35c3aa" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceENutrideal2.xsd" MetadataType="Schema" ID="544e07bc-9d5b-4fdb-8143-8aeb2cc82378" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
