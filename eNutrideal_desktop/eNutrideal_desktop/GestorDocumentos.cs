@@ -19,6 +19,7 @@ namespace eNutrideal_desktop
 
         //private static JsonReader file;
         //private string path = null;
+        //apagar
 
         public GestorDocumentos()
         {
