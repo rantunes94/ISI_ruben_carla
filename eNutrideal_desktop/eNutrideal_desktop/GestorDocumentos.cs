@@ -17,8 +17,8 @@ namespace eNutrideal_desktop
     public partial class GestorDocumentos : Form
     {
 
-        private static JsonReader file;
-        private string path = null;
+        //private static JsonReader file;
+        //private string path = null;
 
         public GestorDocumentos()
         {
@@ -128,6 +128,30 @@ namespace eNutrideal_desktop
                                
                                 Match match2 = regex2.Match(str);
                                 string resultString2 = Convert.ToString(match2);
+
+                                strArray = str.Split('§');
+                               
+                          
+                                Refeicao currentRefeicao = new Refeicao();
+                                currentRefeicao.restaurante = strArray[0].Trim();
+                                currentRefeicao.item = strArray[1].Trim();
+                                currentRefeicao.quantidade = strArray[2].Trim();
+                                currentRefeicao.calorias = strArray[3].Trim();
+                                richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
+
+
+                                strArray = str.Split('|');
+
+                            
+                                currentRefeicao.restaurante = strArray[0].Trim();
+                                currentRefeicao.item = strArray[1].Trim();
+                                currentRefeicao.quantidade = strArray[2].Trim();
+                                currentRefeicao.calorias = strArray[3].Trim();
+                                richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
+
+
+
+                                /*
                                 string strReplaced = str.Replace('§', '\n');
                                
                                 //Gravo um novo txt já com a string limpa
@@ -175,7 +199,7 @@ namespace eNutrideal_desktop
                                 File.Delete(caminhoFicheiro);
                                 //FIM de  para o ficherio txt2
 
-
+                                */
 
 
                             }
@@ -222,7 +246,7 @@ namespace eNutrideal_desktop
             { 
             XmlTextWriter writer = new XmlTextWriter(@"C:\WINDOWS\TEMP\WriteText.xml", Encoding.UTF8);
 
-            string pathRestaurantes = @"C:\WINDOWS\TEMP\WriteText.xml";
+            //string pathRestaurantes = @"C:\WINDOWS\TEMP\WriteText.xml";
 
 
             writer.WriteStartDocument(true);

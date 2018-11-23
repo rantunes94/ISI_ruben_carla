@@ -259,3 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/eNutrideal_desktop/eNutrideal_desktop/Connected Services/ServiceReference1
