@@ -60,7 +60,7 @@ namespace eNutrideal_desktop
 
         
             ServiceENutridealClient client = new ServiceENutridealClient();
-            double resultado_final = client.calcularPesoIdeal(idade, altura, genero);
+            double resultado_final = client.CalcularPesoIdeal(idade, altura, genero);
             textBox_resultado.Text = Convert.ToString(resultado_final);
 
             //double resultado_final = 0;

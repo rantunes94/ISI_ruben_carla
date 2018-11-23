@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using eNutrideal_desktop.ServiceReference1;
 using Newtonsoft.Json;
 
 namespace eNutrideal_desktop
@@ -17,6 +18,7 @@ namespace eNutrideal_desktop
     public partial class GestorDocumentos : Form
     {
 
+      
         //private static JsonReader file;
         //private string path = null;
         //apagar
@@ -37,7 +39,9 @@ namespace eNutrideal_desktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
+
+            ServiceENutridealClient client = new ServiceENutridealClient();
             openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "txt and json files (*.txt / *.json)|*.txt;*.json";
             // "json files (*.json)|*.json";
@@ -66,13 +70,34 @@ namespace eNutrideal_desktop
                     {
                         richTextBox1.Text = richTextBox1.Text + "\n" + Convert.ToString(refeicao);
 
-
-                        
                         Refeicao.listRestaurantes.Add(refeicao.restaurante);
                         Refeicao.listItems.Add(refeicao.item);
                         Refeicao.listQuantidades.Add(refeicao.quantidade);
                         Refeicao.listCalorias.Add(refeicao.calorias);
                     }
+
+                    /*
+                    foreach (var item in Refeicao.listRestaurantes)
+                    {
+                        client.recebeRestaurante(item);
+                    }
+
+                    foreach (var item in Refeicao.listItems)
+                    {
+                        client.recebeItem(item);
+                    }
+
+                    foreach (var item in Refeicao.listQuantidades)
+                    {
+                        client.recebeQuantidade(item);
+                    }
+
+                    foreach (var item in Refeicao.listCalorias)
+                    {
+                        client.recebeCaloria(item);
+                    }
+                    */
+
                 }
 
                 if (extension.Equals(".txt"))
@@ -110,14 +135,17 @@ namespace eNutrideal_desktop
                                 Refeicao.listQuantidades.Add(strArray[2].Trim());
                                 Refeicao.listCalorias.Add(strArray[3].Trim());
 
-
+                                
                                 Refeicao currentRefeicao = new Refeicao();
                                 currentRefeicao.restaurante = strArray[0].Trim();
                                 currentRefeicao.item = strArray[1].Trim();
                                 currentRefeicao.quantidade = strArray[2].Trim();
                                 currentRefeicao.calorias = strArray[3].Trim();                      
                                 richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
-            
+                                
+
+
+  
 
                             }
                             //FIM de "este bloco de código só funciona para o calorias_restaurantes_1.txt"
@@ -129,30 +157,7 @@ namespace eNutrideal_desktop
                                
                                 Match match2 = regex2.Match(str);
                                 string resultString2 = Convert.ToString(match2);
-
-                                strArray = str.Split('§');
-                               
-                          
-                                Refeicao currentRefeicao = new Refeicao();
-                                currentRefeicao.restaurante = strArray[0].Trim();
-                                currentRefeicao.item = strArray[1].Trim();
-                                currentRefeicao.quantidade = strArray[2].Trim();
-                                currentRefeicao.calorias = strArray[3].Trim();
-                                richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
-
-
-                                strArray = str.Split('|');
-
-                            
-                                currentRefeicao.restaurante = strArray[0].Trim();
-                                currentRefeicao.item = strArray[1].Trim();
-                                currentRefeicao.quantidade = strArray[2].Trim();
-                                currentRefeicao.calorias = strArray[3].Trim();
-                                richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
-
-
-
-                                /*
+                                
                                 string strReplaced = str.Replace('§', '\n');
                                
                                 //Gravo um novo txt já com a string limpa
@@ -185,26 +190,52 @@ namespace eNutrideal_desktop
                                         Refeicao.listCalorias.Add(strArray2[3].Trim());
 
 
-
+                                        
                                         Refeicao currentRefeicao = new Refeicao();
                                         currentRefeicao.restaurante = strArray2[0].Trim();
                                         currentRefeicao.item = strArray2[1].Trim();
                                         currentRefeicao.quantidade = strArray2[2].Trim();
                                         currentRefeicao.calorias = strArray2[3].Trim();
                                         richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
+                                        
 
 
+                                        /*
+                                        foreach (var item in Refeicao.listRestaurantes)
+                                        {
+                                            client.recebeRestaurante(item);
+                                        }
+
+                                        foreach (var item in Refeicao.listItems)
+                                        {
+                                            client.recebeItem(item);
+                                        }
+
+                                        foreach (var item in Refeicao.listQuantidades)
+                                        {
+                                            client.recebeQuantidade(item);
+                                        }
+
+                                        foreach (var item in Refeicao.listCalorias)
+                                        {
+                                            client.recebeCaloria(item);
+                                        }
+                                        */
                                     }                               
                                 }
                                 //apagar o ficheiro temporario que criei à pouco
                                 File.Delete(caminhoFicheiro);
                                 //FIM de  para o ficherio txt2
 
-                                */
+                                
 
 
                             }
                         }
+
+                        
+                       
+
                     }                
                 }
             }
@@ -248,9 +279,54 @@ namespace eNutrideal_desktop
 
         private void button3_Click(object sender, EventArgs e)
         {
+            /////  
+            ServiceENutridealClient client = new ServiceENutridealClient();
             if (extension.Equals(".txt") || extension.Equals(".json"))
+            {
+
+
+                foreach (var item in Refeicao.listRestaurantes)
+                {
+                    client.RecebeRestaurante(item);
+                }
+
+                foreach (var item in Refeicao.listItems)
+                {
+                    client.RecebeItem(item);
+                }
+
+                foreach (var item in Refeicao.listQuantidades)
+                {
+                    client.RecebeQuantidade(item);
+                }
+
+                foreach (var item in Refeicao.listCalorias)
+                {
+                    client.RecebeCaloria(item);
+                }
+
+                client.ConverteParaXML();
+                Refeicao.listRestaurantes.Clear();
+                Refeicao.listItems.Clear();
+                Refeicao.listQuantidades.Clear();
+                Refeicao.listRestaurantes.Clear();
+
+                MessageBox.Show("Operação efetuada com sucesso ! ");
+                
+            }
+            else
+            {
+                    MessageBox.Show("Essa extensão não é suportada", "Erro", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+            }
+
+            /////
+
+            /*
+             if (extension.Equals(".txt") || extension.Equals(".json"))
             { 
-            XmlTextWriter writer = new XmlTextWriter(@"C:\WINDOWS\TEMP\WriteText.xml", Encoding.UTF8);
+          
+                XmlTextWriter writer = new XmlTextWriter(@"C:\WINDOWS\TEMP\WriteText.xml", Encoding.UTF8);
 
             //string pathRestaurantes = @"C:\WINDOWS\TEMP\WriteText.xml";
 
@@ -278,7 +354,12 @@ namespace eNutrideal_desktop
                     MessageBoxIcon.Information);
             }
 
-         }
+            }
+            */
+
+
+
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
