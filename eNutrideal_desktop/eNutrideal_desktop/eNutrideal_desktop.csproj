@@ -89,11 +89,17 @@
     <Compile Include="eNutrideal.Designer.cs">
       <DependentUpon>eNutrideal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gestor.cs">
+    <Compile Include="GestorDocumentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestor.Designer.cs">
-      <DependentUpon>Gestor.cs</DependentUpon>
+    <Compile Include="GestorDocumentos.Designer.cs">
+      <DependentUpon>GestorDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestorInfCalorica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestorInfCalorica.Designer.cs">
+      <DependentUpon>GestorInfCalorica.cs</DependentUpon>
     </Compile>
     <Compile Include="JsonReader.cs" />
     <Compile Include="Program.cs" />
@@ -108,8 +114,11 @@
     <EmbeddedResource Include="eNutrideal.resx">
       <DependentUpon>eNutrideal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestor.resx">
-      <DependentUpon>Gestor.cs</DependentUpon>
+    <EmbeddedResource Include="GestorDocumentos.resx">
+      <DependentUpon>GestorDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestorInfCalorica.resx">
+      <DependentUpon>GestorInfCalorica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

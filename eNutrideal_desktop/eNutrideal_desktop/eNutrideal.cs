@@ -33,7 +33,13 @@ namespace eNutrideal_desktop
         private void button_gestor_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Gestor().Show();
+            new GestorDocumentos().Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            new GestorInfCalorica().Show();
         }
     }
 }
