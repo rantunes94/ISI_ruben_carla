@@ -21,7 +21,7 @@ namespace eNutrideal_desktop
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new eNutrideal().Show();
+            new GestorInfCalorica().Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
