@@ -107,9 +107,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(40, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 13);
+            this.label3.Size = new System.Drawing.Size(166, 13);
             this.label3.TabIndex = 29;
-            this.label3.Text = "A informação na RichBox é meramente informativa";
+            this.label3.Text = "O conteúdo do seu documento é:";
             // 
             // button5
             // 
