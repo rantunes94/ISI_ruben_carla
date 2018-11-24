@@ -311,12 +311,12 @@ namespace eNutrideal_desktop
                 Refeicao.listQuantidades.Clear();
                 Refeicao.listRestaurantes.Clear();
 
-                MessageBox.Show("Operação efetuada com sucesso ! ");
+                MessageBox.Show("Operação efetuada com sucesso!");
                 
             }
             else
             {
-                    MessageBox.Show("Essa extensão não é suportada", "Erro", MessageBoxButtons.OK,
+                    MessageBox.Show("A extensão do documento não é suportada", "Erro", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
             }
 

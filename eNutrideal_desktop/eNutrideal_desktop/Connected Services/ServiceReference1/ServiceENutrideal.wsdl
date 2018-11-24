@@ -25,23 +25,17 @@
   <wsdl:message name="IServiceENutrideal_AddRefeicao_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddRefeicaoResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_ApagarRefeicaoPorItem_InputMessage">
-    <wsdl:part name="parameters" element="tns:ApagarRefeicaoPorItem" />
+  <wsdl:message name="IServiceENutrideal_ConverteParaXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConverteParaXML" />
   </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_ApagarRefeicaoPorItem_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ApagarRefeicaoPorItemResponse" />
+  <wsdl:message name="IServiceENutrideal_ConverteParaXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConverteParaXMLResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_CalcularPesoIdeal_InputMessage">
-    <wsdl:part name="parameters" element="tns:CalcularPesoIdeal" />
+  <wsdl:message name="IServiceENutrideal_CriaXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:CriaXML" />
   </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_CalcularPesoIdeal_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CalcularPesoIdealResponse" />
-  </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_CalcularCaloriasDia_InputMessage">
-    <wsdl:part name="parameters" element="tns:CalcularCaloriasDia" />
-  </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_CalcularCaloriasDia_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CalcularCaloriasDiaResponse" />
+  <wsdl:message name="IServiceENutrideal_CriaXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriaXMLResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceENutrideal_RecebeItem_InputMessage">
     <wsdl:part name="parameters" element="tns:RecebeItem" />
@@ -67,17 +61,23 @@
   <wsdl:message name="IServiceENutrideal_RecebeQuantidade_OutputMessage">
     <wsdl:part name="parameters" element="tns:RecebeQuantidadeResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_CriaXML_InputMessage">
-    <wsdl:part name="parameters" element="tns:CriaXML" />
+  <wsdl:message name="IServiceENutrideal_ApagarRefeicaoPorItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApagarRefeicaoPorItem" />
   </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_CriaXML_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CriaXMLResponse" />
+  <wsdl:message name="IServiceENutrideal_ApagarRefeicaoPorItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApagarRefeicaoPorItemResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_ConverteParaXML_InputMessage">
-    <wsdl:part name="parameters" element="tns:ConverteParaXML" />
+  <wsdl:message name="IServiceENutrideal_CalcularPesoIdeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularPesoIdeal" />
   </wsdl:message>
-  <wsdl:message name="IServiceENutrideal_ConverteParaXML_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ConverteParaXMLResponse" />
+  <wsdl:message name="IServiceENutrideal_CalcularPesoIdeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularPesoIdealResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceENutrideal_CalcularCaloriasDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularCaloriasDia" />
+  </wsdl:message>
+  <wsdl:message name="IServiceENutrideal_CalcularCaloriasDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularCaloriasDiaResponse" />
   </wsdl:message>
   <wsdl:portType name="IServiceENutrideal">
     <wsdl:operation name="GetRefeicao">
@@ -92,17 +92,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/AddRefeicao" message="tns:IServiceENutrideal_AddRefeicao_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/AddRefeicaoResponse" message="tns:IServiceENutrideal_AddRefeicao_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ApagarRefeicaoPorItem">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem" message="tns:IServiceENutrideal_ApagarRefeicaoPorItem_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse" message="tns:IServiceENutrideal_ApagarRefeicaoPorItem_OutputMessage" />
+    <wsdl:operation name="ConverteParaXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/ConverteParaXML" message="tns:IServiceENutrideal_ConverteParaXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/ConverteParaXMLResponse" message="tns:IServiceENutrideal_ConverteParaXML_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="CalcularPesoIdeal">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal" message="tns:IServiceENutrideal_CalcularPesoIdeal_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse" message="tns:IServiceENutrideal_CalcularPesoIdeal_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CalcularCaloriasDia">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia" message="tns:IServiceENutrideal_CalcularCaloriasDia_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse" message="tns:IServiceENutrideal_CalcularCaloriasDia_OutputMessage" />
+    <wsdl:operation name="CriaXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/CriaXML" message="tns:IServiceENutrideal_CriaXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/CriaXMLResponse" message="tns:IServiceENutrideal_CriaXML_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RecebeItem">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/RecebeItem" message="tns:IServiceENutrideal_RecebeItem_InputMessage" />
@@ -120,13 +116,17 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/RecebeQuantidade" message="tns:IServiceENutrideal_RecebeQuantidade_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/RecebeQuantidadeResponse" message="tns:IServiceENutrideal_RecebeQuantidade_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="CriaXML">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/CriaXML" message="tns:IServiceENutrideal_CriaXML_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/CriaXMLResponse" message="tns:IServiceENutrideal_CriaXML_OutputMessage" />
+    <wsdl:operation name="ApagarRefeicaoPorItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem" message="tns:IServiceENutrideal_ApagarRefeicaoPorItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse" message="tns:IServiceENutrideal_ApagarRefeicaoPorItem_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ConverteParaXML">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/ConverteParaXML" message="tns:IServiceENutrideal_ConverteParaXML_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/ConverteParaXMLResponse" message="tns:IServiceENutrideal_ConverteParaXML_OutputMessage" />
+    <wsdl:operation name="CalcularPesoIdeal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal" message="tns:IServiceENutrideal_CalcularPesoIdeal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse" message="tns:IServiceENutrideal_CalcularPesoIdeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularCaloriasDia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia" message="tns:IServiceENutrideal_CalcularCaloriasDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse" message="tns:IServiceENutrideal_CalcularCaloriasDia_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceENutrideal" type="tns:IServiceENutrideal">
@@ -158,8 +158,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ApagarRefeicaoPorItem">
-      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem" style="document" />
+    <wsdl:operation name="ConverteParaXML">
+      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/ConverteParaXML" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -167,17 +167,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CalcularPesoIdeal">
-      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CalcularCaloriasDia">
-      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia" style="document" />
+    <wsdl:operation name="CriaXML">
+      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/CriaXML" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -221,8 +212,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CriaXML">
-      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/CriaXML" style="document" />
+    <wsdl:operation name="ApagarRefeicaoPorItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -230,8 +221,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ConverteParaXML">
-      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/ConverteParaXML" style="document" />
+    <wsdl:operation name="CalcularPesoIdeal">
+      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularCaloriasDia">
+      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

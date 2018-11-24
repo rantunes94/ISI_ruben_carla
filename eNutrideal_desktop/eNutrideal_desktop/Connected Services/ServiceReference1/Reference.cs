@@ -128,23 +128,17 @@ namespace eNutrideal_desktop.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/AddRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/AddRefeicaoResponse")]
         System.Threading.Tasks.Task AddRefeicaoAsync(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
-        void ApagarRefeicaoPorItem(string item);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ConverteParaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/ConverteParaXMLResponse")]
+        void ConverteParaXML();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
-        System.Threading.Tasks.Task ApagarRefeicaoPorItemAsync(string item);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ConverteParaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/ConverteParaXMLResponse")]
+        System.Threading.Tasks.Task ConverteParaXMLAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse")]
-        double CalcularPesoIdeal(int idade, int altura, string genero);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CriaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/CriaXMLResponse")]
+        void CriaXML(string restaurante, string item, string quantidade, string calorias);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse")]
-        System.Threading.Tasks.Task<double> CalcularPesoIdealAsync(int idade, int altura, string genero);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
-        double CalcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
-        System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CriaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/CriaXMLResponse")]
+        System.Threading.Tasks.Task CriaXMLAsync(string restaurante, string item, string quantidade, string calorias);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeItem", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeItemResponse")]
         void RecebeItem(string item);
@@ -170,17 +164,23 @@ namespace eNutrideal_desktop.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeQuantidade", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeQuantidadeResponse")]
         System.Threading.Tasks.Task RecebeQuantidadeAsync(string quantidade);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CriaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/CriaXMLResponse")]
-        void CriaXML(string restaurante, string item, string quantidade, string calorias);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
+        void ApagarRefeicaoPorItem(string item);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CriaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/CriaXMLResponse")]
-        System.Threading.Tasks.Task CriaXMLAsync(string restaurante, string item, string quantidade, string calorias);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
+        System.Threading.Tasks.Task ApagarRefeicaoPorItemAsync(string item);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ConverteParaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/ConverteParaXMLResponse")]
-        void ConverteParaXML();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse")]
+        double CalcularPesoIdeal(int idade, int altura, string genero);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ConverteParaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/ConverteParaXMLResponse")]
-        System.Threading.Tasks.Task ConverteParaXMLAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse")]
+        System.Threading.Tasks.Task<double> CalcularPesoIdealAsync(int idade, int altura, string genero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
+        double CalcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
+        System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -234,28 +234,20 @@ namespace eNutrideal_desktop.ServiceReference1 {
             return base.Channel.AddRefeicaoAsync(refeicao);
         }
         
-        public void ApagarRefeicaoPorItem(string item) {
-            base.Channel.ApagarRefeicaoPorItem(item);
+        public void ConverteParaXML() {
+            base.Channel.ConverteParaXML();
         }
         
-        public System.Threading.Tasks.Task ApagarRefeicaoPorItemAsync(string item) {
-            return base.Channel.ApagarRefeicaoPorItemAsync(item);
+        public System.Threading.Tasks.Task ConverteParaXMLAsync() {
+            return base.Channel.ConverteParaXMLAsync();
         }
         
-        public double CalcularPesoIdeal(int idade, int altura, string genero) {
-            return base.Channel.CalcularPesoIdeal(idade, altura, genero);
+        public void CriaXML(string restaurante, string item, string quantidade, string calorias) {
+            base.Channel.CriaXML(restaurante, item, quantidade, calorias);
         }
         
-        public System.Threading.Tasks.Task<double> CalcularPesoIdealAsync(int idade, int altura, string genero) {
-            return base.Channel.CalcularPesoIdealAsync(idade, altura, genero);
-        }
-        
-        public double CalcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade) {
-            return base.Channel.CalcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
-        }
-        
-        public System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade) {
-            return base.Channel.CalcularCaloriasDiaAsync(idade, genero, altura, peso, nivelAtividade);
+        public System.Threading.Tasks.Task CriaXMLAsync(string restaurante, string item, string quantidade, string calorias) {
+            return base.Channel.CriaXMLAsync(restaurante, item, quantidade, calorias);
         }
         
         public void RecebeItem(string item) {
@@ -290,20 +282,28 @@ namespace eNutrideal_desktop.ServiceReference1 {
             return base.Channel.RecebeQuantidadeAsync(quantidade);
         }
         
-        public void CriaXML(string restaurante, string item, string quantidade, string calorias) {
-            base.Channel.CriaXML(restaurante, item, quantidade, calorias);
+        public void ApagarRefeicaoPorItem(string item) {
+            base.Channel.ApagarRefeicaoPorItem(item);
         }
         
-        public System.Threading.Tasks.Task CriaXMLAsync(string restaurante, string item, string quantidade, string calorias) {
-            return base.Channel.CriaXMLAsync(restaurante, item, quantidade, calorias);
+        public System.Threading.Tasks.Task ApagarRefeicaoPorItemAsync(string item) {
+            return base.Channel.ApagarRefeicaoPorItemAsync(item);
         }
         
-        public void ConverteParaXML() {
-            base.Channel.ConverteParaXML();
+        public double CalcularPesoIdeal(int idade, int altura, string genero) {
+            return base.Channel.CalcularPesoIdeal(idade, altura, genero);
         }
         
-        public System.Threading.Tasks.Task ConverteParaXMLAsync() {
-            return base.Channel.ConverteParaXMLAsync();
+        public System.Threading.Tasks.Task<double> CalcularPesoIdealAsync(int idade, int altura, string genero) {
+            return base.Channel.CalcularPesoIdealAsync(idade, altura, genero);
+        }
+        
+        public double CalcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade) {
+            return base.Channel.CalcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
+        }
+        
+        public System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade) {
+            return base.Channel.CalcularCaloriasDiaAsync(idade, genero, altura, peso, nivelAtividade);
         }
     }
 }
