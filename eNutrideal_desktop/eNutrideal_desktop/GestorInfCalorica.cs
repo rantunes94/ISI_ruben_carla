@@ -28,5 +28,17 @@ namespace eNutrideal_desktop
             this.Hide();
             new AdicionarRefeicao().Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new VisualizadorDePesquisas().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new ApagarRefeicao().Show();
+        }
     }
 }

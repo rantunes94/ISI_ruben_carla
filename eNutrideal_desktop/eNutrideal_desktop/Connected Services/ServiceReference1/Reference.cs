@@ -122,6 +122,12 @@ namespace eNutrideal_desktop.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorRestaurante", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorRestauranteResponse")]
         System.Threading.Tasks.Task<eNutrideal_desktop.ServiceReference1.Refeicao[]> GetRefeicaoPorRestauranteAsync(string restaurante);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorItemResponse")]
+        eNutrideal_desktop.ServiceReference1.Refeicao[] GetRefeicaoPorItem(string item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorItemResponse")]
+        System.Threading.Tasks.Task<eNutrideal_desktop.ServiceReference1.Refeicao[]> GetRefeicaoPorItemAsync(string item);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/AddRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/AddRefeicaoResponse")]
         void AddRefeicao(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
         
@@ -224,6 +230,14 @@ namespace eNutrideal_desktop.ServiceReference1 {
         
         public System.Threading.Tasks.Task<eNutrideal_desktop.ServiceReference1.Refeicao[]> GetRefeicaoPorRestauranteAsync(string restaurante) {
             return base.Channel.GetRefeicaoPorRestauranteAsync(restaurante);
+        }
+        
+        public eNutrideal_desktop.ServiceReference1.Refeicao[] GetRefeicaoPorItem(string item) {
+            return base.Channel.GetRefeicaoPorItem(item);
+        }
+        
+        public System.Threading.Tasks.Task<eNutrideal_desktop.ServiceReference1.Refeicao[]> GetRefeicaoPorItemAsync(string item) {
+            return base.Channel.GetRefeicaoPorItemAsync(item);
         }
         
         public void AddRefeicao(eNutrideal_desktop.ServiceReference1.Refeicao refeicao) {

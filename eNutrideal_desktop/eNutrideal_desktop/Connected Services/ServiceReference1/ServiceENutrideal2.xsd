@@ -27,10 +27,24 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetRefeicaoPorItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="item" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefeicaoPorItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/eNutridealWebservice" minOccurs="0" name="GetRefeicaoPorItemResult" nillable="true" type="q3:ArrayOfRefeicao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AddRefeicao">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/eNutridealWebservice" minOccurs="0" name="refeicao" nillable="true" type="q3:Refeicao" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/eNutridealWebservice" minOccurs="0" name="refeicao" nillable="true" type="q4:Refeicao" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

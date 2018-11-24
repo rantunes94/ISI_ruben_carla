@@ -67,7 +67,7 @@ namespace eNutrideal_desktop
             double peso = Convert.ToDouble(numericUpDown_peso.Value);
             int altura = Convert.ToInt32(numericUpDown_altura.Value);
             string genero = comboBox_genero.Text;
-            double resultado_incompleto = 0;
+            //double resultado_incompleto = 0;
            
             string nivelAtividade = comboBox_atividadeFisica.Text;
 

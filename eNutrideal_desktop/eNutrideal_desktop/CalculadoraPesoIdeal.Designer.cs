@@ -63,6 +63,7 @@
             this.comboBox_genero.Name = "comboBox_genero";
             this.comboBox_genero.Size = new System.Drawing.Size(121, 28);
             this.comboBox_genero.TabIndex = 21;
+            this.comboBox_genero.SelectedIndexChanged += new System.EventHandler(this.comboBox_genero_SelectedIndexChanged);
             // 
             // label5
             // 

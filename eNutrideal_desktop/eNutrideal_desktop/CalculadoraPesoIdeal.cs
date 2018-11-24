@@ -123,5 +123,10 @@ namespace eNutrideal_desktop
         {
 
         }
+
+        private void comboBox_genero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
