@@ -22,5 +22,11 @@ namespace eNutrideal_desktop
             this.Hide();
             new eNutrideal().Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AdicionarRefeicao().Show();
+        }
     }
 }

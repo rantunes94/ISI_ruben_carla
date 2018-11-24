@@ -157,5 +157,10 @@ namespace eNutrideal_desktop
         {
 
         }
+
+        private void textBox_resultado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

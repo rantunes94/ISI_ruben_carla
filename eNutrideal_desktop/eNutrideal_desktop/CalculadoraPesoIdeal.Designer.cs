@@ -123,6 +123,7 @@
             this.textBox_resultado.Name = "textBox_resultado";
             this.textBox_resultado.Size = new System.Drawing.Size(62, 20);
             this.textBox_resultado.TabIndex = 24;
+            this.textBox_resultado.TextChanged += new System.EventHandler(this.textBox_resultado_TextChanged);
             // 
             // label7
             // 
