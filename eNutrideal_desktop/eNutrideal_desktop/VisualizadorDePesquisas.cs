@@ -16,7 +16,7 @@ namespace eNutrideal_desktop
         public VisualizadorDePesquisas()
         {
             InitializeComponent();
-            comboBox_tipoPesquisa.Items.Add(new Item("Restaurante"));
+            comboBox_tipoPesquisa.Items.Add("Restaurante");
             comboBox_tipoPesquisa.Items.Add(new Item("Refeição"));
         }
 
@@ -91,6 +91,11 @@ namespace eNutrideal_desktop
             }
             richTextBox1.Text = res;
 
+
+        }
+
+        private void comboBox_tipoPesquisa_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

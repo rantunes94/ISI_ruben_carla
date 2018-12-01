@@ -49,5 +49,15 @@ namespace eNutrideal_desktop
                 MessageBox.Show("A operação não pode ser efetuada sem que introduza uma refeição primeiro");
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //deveria de ser uma combo box com os item da BD ou nem por isso?
+        }
     }
 }

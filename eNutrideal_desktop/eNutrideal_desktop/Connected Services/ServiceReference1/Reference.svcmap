@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d024036a-817d-48b5-a947-0e886986a787" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="71173196-1e8f-4ec6-bbda-a5433c7256e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:53005/ServiceENutrideal.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServiceENutrideal.disco" MetadataType="Disco" ID="b46bdf8b-425a-4e40-8f25-e173ad9f401a" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?disco" />
-    <MetadataFile FileName="ServiceENutrideal.xsd" MetadataType="Schema" ID="799159bb-815d-4030-84e4-32a4a83226e5" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServiceENutrideal.wsdl" MetadataType="Wsdl" ID="24579354-922e-4ec8-9f60-f6d1baa02b4d" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?wsdl" />
-    <MetadataFile FileName="ServiceENutrideal1.xsd" MetadataType="Schema" ID="2a476e94-ddc5-4293-a30b-011ef5aab21c" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServiceENutrideal2.xsd" MetadataType="Schema" ID="4d12f301-c7cd-46ee-9931-8fc164740995" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceENutrideal.disco" MetadataType="Disco" ID="44bb1f74-e7e4-43f4-a28b-1b2f893e5d16" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?disco" />
+    <MetadataFile FileName="ServiceENutrideal.xsd" MetadataType="Schema" ID="d6f9d302-5f0d-4358-a00d-b964a411edff" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceENutrideal.wsdl" MetadataType="Wsdl" ID="cae09ae7-1670-4a0e-a736-a373aaa0fabd" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?wsdl" />
+    <MetadataFile FileName="ServiceENutrideal1.xsd" MetadataType="Schema" ID="210942ef-e709-40ad-9bff-bcf2a7043ab7" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceENutrideal2.xsd" MetadataType="Schema" ID="61a8f7c5-fd5d-4787-a958-b810a356737c" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -55,7 +55,8 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(357, 24);
             this.label1.TabIndex = 27;
-            this.label1.Text = "Neste painel puderá apagar uma refeição";
+            this.label1.Text = "Neste painel poderá apagar uma refeição";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -73,6 +74,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(171, 20);
             this.textBox1.TabIndex = 29;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 

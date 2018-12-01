@@ -125,6 +125,7 @@
             this.comboBox_tipoPesquisa.Name = "comboBox_tipoPesquisa";
             this.comboBox_tipoPesquisa.Size = new System.Drawing.Size(128, 21);
             this.comboBox_tipoPesquisa.TabIndex = 22;
+            this.comboBox_tipoPesquisa.SelectedIndexChanged += new System.EventHandler(this.comboBox_tipoPesquisa_SelectedIndexChanged);
             // 
             // VisualizadorDePesquisas
             // 

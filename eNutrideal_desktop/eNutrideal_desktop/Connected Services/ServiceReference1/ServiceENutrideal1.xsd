@@ -15,4 +15,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Refeicao" nillable="true" type="tns:Refeicao" />
+  <xs:complexType name="DadosPessoais">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Altura" type="xs:int" />
+      <xs:element minOccurs="0" name="Genero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Idade" type="xs:int" />
+      <xs:element minOccurs="0" name="NivelAtividade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Peso" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DadosPessoais" nillable="true" type="tns:DadosPessoais" />
 </xs:schema>

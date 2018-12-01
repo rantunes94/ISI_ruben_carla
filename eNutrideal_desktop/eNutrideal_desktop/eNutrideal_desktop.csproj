@@ -90,11 +90,18 @@
     <Compile Include="CalculadoraPesoIdeal.Designer.cs">
       <DependentUpon>CalculadoraPesoIdeal.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculadoraPlanoCalorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadoraPlanoCalorico.Designer.cs">
+      <DependentUpon>CalculadoraPlanoCalorico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="DadosPessoais.cs" />
     <Compile Include="eNutrideal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraPesoIdeal.resx">
       <DependentUpon>CalculadoraPesoIdeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadoraPlanoCalorico.resx">
+      <DependentUpon>CalculadoraPlanoCalorico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="eNutrideal.resx">
       <DependentUpon>eNutrideal.cs</DependentUpon>

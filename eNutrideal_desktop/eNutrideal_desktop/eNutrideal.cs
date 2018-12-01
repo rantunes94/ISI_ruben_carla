@@ -41,5 +41,11 @@ namespace eNutrideal_desktop
             this.Hide();
             new GestorInfCalorica().Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CalculadoraPlanoCalorico().Show();
+        }
     }
 }
