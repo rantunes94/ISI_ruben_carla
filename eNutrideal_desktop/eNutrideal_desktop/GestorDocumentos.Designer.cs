@@ -118,7 +118,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 27);
             this.button5.TabIndex = 30;
-            this.button5.Text = "Limpar Lista";
+            this.button5.Text = "Limpar Tudo";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -129,10 +129,10 @@
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(27, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(760, 18);
+            this.label2.Size = new System.Drawing.Size(747, 18);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Bem vindo ao Gestor de Documentos , aqui poderá adicionar o conteúdo dos seus doc" +
-    "umentos à base de dados.";
+            this.label2.Text = "Bem vindo ao Gestor de Documentos , aqui pode adicionar o conteúdo dos seus docum" +
+    "entos à base de dados.";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // GestorDocumentos

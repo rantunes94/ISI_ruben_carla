@@ -198,6 +198,7 @@ namespace eNutrideal_desktop
         private void button5_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+            textBox1.Clear();
         }
 
         private void label2_Click(object sender, EventArgs e)
