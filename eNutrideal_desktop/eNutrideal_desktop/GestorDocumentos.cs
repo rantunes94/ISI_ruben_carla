@@ -58,19 +58,21 @@ namespace eNutrideal_desktop
                 {
                     richTextBox1.Clear();
                     //Deserialize the JSON text to an Refeicao list.
-                    var myobjList = Deserialize<List<RefeicaoANTIGA>>(texto);
+                    var myobjList = Deserialize<List<Refeicao>>(texto);
 
                     foreach (var refeicao in myobjList)
                     {
-                        richTextBox1.Text = richTextBox1.Text + "\n" + Convert.ToString(refeicao);
+                       
                         // Refeicao do server 
                         Refeicao novaRefeicao = new Refeicao();
-                        novaRefeicao.Restaurante = refeicao.restaurante;
-                        novaRefeicao.Item = refeicao.item;
-                        novaRefeicao.Quantidade = refeicao.quantidade;
-                        novaRefeicao.Calorias = refeicao.calorias;
+                        novaRefeicao.Restaurante = refeicao.Restaurante;
+                        novaRefeicao.Item = refeicao.Item;
+                        novaRefeicao.Quantidade = refeicao.Quantidade;
+                        novaRefeicao.Calorias = refeicao.Calorias;
                         client.recebeRefeicao(novaRefeicao);
                         //
+                        richTextBox1.Text = richTextBox1.Text + "\n" + novaRefeicao.Restaurante + "\t" + novaRefeicao.Item + "\t" + novaRefeicao.Quantidade + "\t" + novaRefeicao.Calorias;
+
                     }
                 }
 

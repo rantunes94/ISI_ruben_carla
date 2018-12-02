@@ -53,12 +53,24 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="ConverteParaXML">
+  <xs:element name="addListRefeicoesToXML">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="ConverteParaXMLResponse">
+  <xs:element name="addListRefeicoesToXMLResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recebeRefeicao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/eNutridealWebservice" minOccurs="0" name="refeicao" nillable="true" type="q5:Refeicao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recebeRefeicaoResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -78,54 +90,6 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RecebeItem">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="item" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecebeItemResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecebeRestaurante">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="restaurante" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecebeRestauranteResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecebeCaloria">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="caloria" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecebeCaloriaResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecebeQuantidade">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="quantidade" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecebeQuantidadeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="ApagarRefeicaoPorItem">
     <xs:complexType>
       <xs:sequence>
@@ -141,7 +105,7 @@
   <xs:element name="Calculadora">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/eNutridealWebservice" minOccurs="0" name="dados" nillable="true" type="q5:DadosPessoais" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/eNutridealWebservice" minOccurs="0" name="dados" nillable="true" type="q6:DadosPessoais" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
