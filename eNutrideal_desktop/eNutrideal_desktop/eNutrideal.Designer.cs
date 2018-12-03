@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_calorias = new System.Windows.Forms.Button();
-            this.button_peso = new System.Windows.Forms.Button();
             this.button_gestor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,34 +35,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button_calorias
-            // 
-            this.button_calorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_calorias.Location = new System.Drawing.Point(61, 179);
-            this.button_calorias.Name = "button_calorias";
-            this.button_calorias.Size = new System.Drawing.Size(204, 38);
-            this.button_calorias.TabIndex = 0;
-            this.button_calorias.Text = "Calculadora de Calorias";
-            this.button_calorias.UseVisualStyleBackColor = true;
-            this.button_calorias.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button_peso
-            // 
-            this.button_peso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_peso.Location = new System.Drawing.Point(61, 223);
-            this.button_peso.Name = "button_peso";
-            this.button_peso.Size = new System.Drawing.Size(204, 37);
-            this.button_peso.TabIndex = 1;
-            this.button_peso.Text = "Calculadora de Peso Ideal";
-            this.button_peso.UseVisualStyleBackColor = true;
-            this.button_peso.Click += new System.EventHandler(this.button_peso_Click);
-            // 
             // button_gestor
             // 
             this.button_gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_gestor.Location = new System.Drawing.Point(61, 350);
+            this.button_gestor.Location = new System.Drawing.Point(279, 224);
             this.button_gestor.Name = "button_gestor";
-            this.button_gestor.Size = new System.Drawing.Size(204, 32);
+            this.button_gestor.Size = new System.Drawing.Size(216, 50);
             this.button_gestor.TabIndex = 2;
             this.button_gestor.Text = " Gestor de Documentos";
             this.button_gestor.UseVisualStyleBackColor = true;
@@ -84,11 +60,11 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(61, 388);
+            this.button1.Location = new System.Drawing.Point(545, 224);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(204, 50);
             this.button1.TabIndex = 4;
-            this.button1.Text = " Gestor de Informação Calórica";
+            this.button1.Text = " Gestor de Refeições";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -106,11 +82,11 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(61, 293);
+            this.button2.Location = new System.Drawing.Point(33, 223);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(204, 51);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Calculadora de Plano Calorico";
+            this.button2.Text = "Calculadora de Plano Calórico";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -124,8 +100,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_gestor);
-            this.Controls.Add(this.button_peso);
-            this.Controls.Add(this.button_calorias);
             this.Name = "eNutrideal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "eNutrideal";
@@ -135,9 +109,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button_calorias;
-        private System.Windows.Forms.Button button_peso;
         private System.Windows.Forms.Button button_gestor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;

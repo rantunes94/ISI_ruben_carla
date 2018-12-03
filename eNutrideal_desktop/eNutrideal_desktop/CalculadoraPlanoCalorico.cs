@@ -51,7 +51,7 @@ namespace eNutrideal_desktop
 
 
             ServiceENutridealClient client = new ServiceENutridealClient();
-            //client.Calculadora(nao sei o que se coloca aqui);
+            //client.Calculadoras()
 
 
         }

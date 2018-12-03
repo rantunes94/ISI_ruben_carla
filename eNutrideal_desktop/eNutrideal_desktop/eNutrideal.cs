@@ -39,7 +39,7 @@ namespace eNutrideal_desktop
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            new GestorInfCalorica().Show();
+            new GestorRefeicoes().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

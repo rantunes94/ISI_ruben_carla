@@ -1,6 +1,6 @@
 ﻿namespace eNutrideal_desktop
 {
-    partial class GestorInfCalorica
+    partial class GestorRefeicoes
     {
         /// <summary>
         /// Required designer variable.

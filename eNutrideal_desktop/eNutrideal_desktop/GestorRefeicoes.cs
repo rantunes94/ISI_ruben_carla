@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace eNutrideal_desktop
 {
-    public partial class GestorInfCalorica : Form
+    public partial class GestorRefeicoes : Form
     {
-        public GestorInfCalorica()
+        public GestorRefeicoes()
         {
             InitializeComponent();
         }

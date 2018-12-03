@@ -101,7 +101,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="DadosPessoais.cs" />
     <Compile Include="eNutrideal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +113,11 @@
     <Compile Include="GestorDocumentos.Designer.cs">
       <DependentUpon>GestorDocumentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestorInfCalorica.cs">
+    <Compile Include="GestorRefeicoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestorInfCalorica.Designer.cs">
-      <DependentUpon>GestorInfCalorica.cs</DependentUpon>
+    <Compile Include="GestorRefeicoes.Designer.cs">
+      <DependentUpon>GestorRefeicoes.cs</DependentUpon>
     </Compile>
     <Compile Include="JsonReader.cs" />
     <Compile Include="Program.cs" />
@@ -150,8 +149,8 @@
     <EmbeddedResource Include="GestorDocumentos.resx">
       <DependentUpon>GestorDocumentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestorInfCalorica.resx">
-      <DependentUpon>GestorInfCalorica.cs</DependentUpon>
+    <EmbeddedResource Include="GestorRefeicoes.resx">
+      <DependentUpon>GestorRefeicoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
