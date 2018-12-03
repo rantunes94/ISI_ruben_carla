@@ -17,25 +17,19 @@ namespace eNutrideal_desktop
 {
     public partial class GestorDocumentos : Form
     {
-
-      
-        //private static JsonReader file;
-        //private string path = null;
-        //apagar
-
         public GestorDocumentos()
         {
             InitializeComponent();
-            
+
         }
         private string extension = null;
 
         public static T Deserialize<T>(string json)
         {
-           return JsonConvert.DeserializeObject<T>(json);
+            return JsonConvert.DeserializeObject<T>(json);
         }
 
-     
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -68,84 +62,59 @@ namespace eNutrideal_desktop
 
                     foreach (var refeicao in myobjList)
                     {
-                        richTextBox1.Text = richTextBox1.Text + "\n" + Convert.ToString(refeicao);
+                       
+                        // Refeicao do server 
+                        Refeicao novaRefeicao = new Refeicao();
+                        novaRefeicao.Restaurante = refeicao.Restaurante;
+                        novaRefeicao.Item = refeicao.Item;
+                        novaRefeicao.Quantidade = refeicao.Quantidade;
+                        novaRefeicao.Calorias = refeicao.Calorias;
+                        client.recebeRefeicao(novaRefeicao);
+                        //
+                        richTextBox1.Text = richTextBox1.Text + "\n" + novaRefeicao.Restaurante + "\t" + novaRefeicao.Item + "\t" + novaRefeicao.Quantidade + "\t" + novaRefeicao.Calorias;
 
-                        Refeicao.listRestaurantes.Add(refeicao.restaurante);
-                        Refeicao.listItems.Add(refeicao.item);
-                        Refeicao.listQuantidades.Add(refeicao.quantidade);
-                        Refeicao.listCalorias.Add(refeicao.calorias);
                     }
-
-                    /*
-                    foreach (var item in Refeicao.listRestaurantes)
-                    {
-                        client.recebeRestaurante(item);
-                    }
-
-                    foreach (var item in Refeicao.listItems)
-                    {
-                        client.recebeItem(item);
-                    }
-
-                    foreach (var item in Refeicao.listQuantidades)
-                    {
-                        client.recebeQuantidade(item);
-                    }
-
-                    foreach (var item in Refeicao.listCalorias)
-                    {
-                        client.recebeCaloria(item);
-                    }
-                    */
-
                 }
 
                 if (extension.Equals(".txt"))
                 {
 
-                    
+
                     string characterEspecial = @"\t";
                     string characterEspecial2 = @"\§";
                     Regex regex1 = new Regex(characterEspecial, RegexOptions.IgnoreCase);
                     Regex regex2 = new Regex(characterEspecial2, RegexOptions.IgnoreCase);
 
                     richTextBox1.Clear();
-                   
+
                     using (StreamReader sr = new StreamReader(nome, Encoding.Default))
                     {
 
-                        
+
                         while (!sr.EndOfStream)
                         {
                             string str;
                             string[] strArray;
-                            
+
                             str = sr.ReadLine();
 
                             Match match1 = regex1.Match(str);
                             string resultString = Convert.ToString(match1);
 
                             // este bloco de código só funciona para o calorias_restaurantes_1.txt  
-                            if (resultString.Equals("\t")) {
+                            if (resultString.Equals("\t"))
+                            {
                                 strArray = str.Split('\t');
 
-
-                                Refeicao.listRestaurantes.Add(strArray[0].Trim());
-                                Refeicao.listItems.Add(strArray[1].Trim());
-                                Refeicao.listQuantidades.Add(strArray[2].Trim());
-                                Refeicao.listCalorias.Add(strArray[3].Trim());
-
-                                
-                                Refeicao currentRefeicao = new Refeicao();
-                                currentRefeicao.restaurante = strArray[0].Trim();
-                                currentRefeicao.item = strArray[1].Trim();
-                                currentRefeicao.quantidade = strArray[2].Trim();
-                                currentRefeicao.calorias = strArray[3].Trim();                      
-                                richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
-                                
-
-
-  
+                                // Refeicao do server 
+                                Refeicao novaRefeicao = new Refeicao();
+                                novaRefeicao.Restaurante = strArray[0].Trim();
+                                novaRefeicao.Item = strArray[1].Trim();
+                                novaRefeicao.Quantidade = strArray[2].Trim();
+                                novaRefeicao.Calorias = strArray[3].Trim();
+                                client.recebeRefeicao(novaRefeicao);
+                                //                                 
+                                richTextBox1.Text = richTextBox1.Text + "\n" + novaRefeicao.Restaurante + "\t" + novaRefeicao.Item + "\t" + novaRefeicao.Quantidade + "\t" + novaRefeicao.Calorias;
 
                             }
                             //FIM de "este bloco de código só funciona para o calorias_restaurantes_1.txt"
@@ -154,12 +123,11 @@ namespace eNutrideal_desktop
                             // para o ficherio txt2
                             else
                             {
-                               
                                 Match match2 = regex2.Match(str);
                                 string resultString2 = Convert.ToString(match2);
-                                
+
                                 string strReplaced = str.Replace('§', '\n');
-                               
+
                                 //Gravo um novo txt já com a string limpa
                                 File.WriteAllText(@"C:\WINDOWS\TEMP\WriteText.txt", strReplaced);
                                 string caminhoFicheiro = @"C:\WINDOWS\TEMP\WriteText.txt";
@@ -167,76 +135,35 @@ namespace eNutrideal_desktop
                                 //Limpo esse txt de forma a que o stream reader não me esteja a ler espaços vazios causando problemas de matriz vazia
                                 var lines = File.ReadAllLines(caminhoFicheiro).Where(arg => !string.IsNullOrWhiteSpace(arg));
                                 File.WriteAllLines(caminhoFicheiro, lines);
-                              
+
 
                                 //abro um novo stream reader e agora apenas tenho de lidar com o ficheiro tal como lidei com ele no ficheiro 1
                                 using (StreamReader sr2 = new StreamReader(caminhoFicheiro, Encoding.Default))
                                 {
-                                    
-
                                     while (sr2.Peek() != -1)
                                     {
-                                            string str2;
-                                            string[] strArray2;
-                                            str2 = sr2.ReadLine();
-                                            strArray2 = str2.Split('|');
+                                        string str2;
+                                        string[] strArray2;
+                                        str2 = sr2.ReadLine();
+                                        strArray2 = str2.Split('|');
 
-
-
-
-                                        Refeicao.listRestaurantes.Add(strArray2[0].Trim());
-                                        Refeicao.listItems.Add(strArray2[1].Trim());
-                                        Refeicao.listQuantidades.Add(strArray2[2].Trim());
-                                        Refeicao.listCalorias.Add(strArray2[3].Trim());
-
-
-                                        
-                                        Refeicao currentRefeicao = new Refeicao();
-                                        currentRefeicao.restaurante = strArray2[0].Trim();
-                                        currentRefeicao.item = strArray2[1].Trim();
-                                        currentRefeicao.quantidade = strArray2[2].Trim();
-                                        currentRefeicao.calorias = strArray2[3].Trim();
-                                        richTextBox1.Text = richTextBox1.Text + "\n" + currentRefeicao.restaurante + "\t" + currentRefeicao.item + "\t" + currentRefeicao.quantidade + "\t" + currentRefeicao.calorias;
-                                        
-
-
-                                        /*
-                                        foreach (var item in Refeicao.listRestaurantes)
-                                        {
-                                            client.recebeRestaurante(item);
-                                        }
-
-                                        foreach (var item in Refeicao.listItems)
-                                        {
-                                            client.recebeItem(item);
-                                        }
-
-                                        foreach (var item in Refeicao.listQuantidades)
-                                        {
-                                            client.recebeQuantidade(item);
-                                        }
-
-                                        foreach (var item in Refeicao.listCalorias)
-                                        {
-                                            client.recebeCaloria(item);
-                                        }
-                                        */
-                                    }                               
+                                        // Refeicao do server 
+                                        Refeicao novaRefeicao = new Refeicao();
+                                        novaRefeicao.Restaurante = strArray2[0].Trim();
+                                        novaRefeicao.Item = strArray2[1].Trim();
+                                        novaRefeicao.Quantidade = strArray2[2].Trim();
+                                        novaRefeicao.Calorias = strArray2[3].Trim();
+                                        client.recebeRefeicao(novaRefeicao);
+                                        //
+                                        richTextBox1.Text = richTextBox1.Text + "\n" + novaRefeicao.Restaurante + "\t" + novaRefeicao.Item + "\t" + novaRefeicao.Quantidade + "\t" + novaRefeicao.Calorias;
+                                    }
                                 }
                                 //apagar o ficheiro temporario que criei à pouco
                                 File.Delete(caminhoFicheiro);
                                 //FIM de  para o ficherio txt2
-
-                                
-
-
                             }
                         }
-
-                        
-                       
-
-                    }                
+                    }
                 }
             }
         }
@@ -252,118 +179,26 @@ namespace eNutrideal_desktop
 
         }
 
-        //para criar documento XML 
-        private void createNode(string restaurante, string item, string quantidade, string calorias,
-            XmlTextWriter writer)
-        {
-            writer.WriteStartElement("refeicao");
-
-                writer.WriteStartElement("restaurante");
-                writer.WriteString(restaurante);
-                writer.WriteEndElement();
-
-                writer.WriteStartElement("item");
-                writer.WriteString(item);
-                writer.WriteEndElement();
-
-                writer.WriteStartElement("quantidade");
-                writer.WriteString(quantidade);
-                writer.WriteEndElement();
-
-                writer.WriteStartElement("calorias");
-                writer.WriteString(calorias);
-                writer.WriteEndElement();
-
-            writer.WriteEndElement();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            /////  
+            ///// Botão para o server adicional a informação ao refeicoes.xml
             ServiceENutridealClient client = new ServiceENutridealClient();
             if (extension.Equals(".txt") || extension.Equals(".json"))
             {
-
-
-                foreach (var item in Refeicao.listRestaurantes)
-                {
-                    client.RecebeRestaurante(item);
-                }
-
-                foreach (var item in Refeicao.listItems)
-                {
-                    client.RecebeItem(item);
-                }
-
-                foreach (var item in Refeicao.listQuantidades)
-                {
-                    client.RecebeQuantidade(item);
-                }
-
-                foreach (var item in Refeicao.listCalorias)
-                {
-                    client.RecebeCaloria(item);
-                }
-
-                client.ConverteParaXML();
-                Refeicao.listRestaurantes.Clear();
-                Refeicao.listItems.Clear();
-                Refeicao.listQuantidades.Clear();
-                Refeicao.listRestaurantes.Clear();
-
+                client.addListRefeicoesToXML();
                 MessageBox.Show("Operação efetuada com sucesso!");
-                
             }
             else
             {
-                    MessageBox.Show("A extensão do documento não é suportada", "Erro", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-            }
-
-            /////
-
-            /*
-             if (extension.Equals(".txt") || extension.Equals(".json"))
-            { 
-          
-                XmlTextWriter writer = new XmlTextWriter(@"C:\WINDOWS\TEMP\WriteText.xml", Encoding.UTF8);
-
-            //string pathRestaurantes = @"C:\WINDOWS\TEMP\WriteText.xml";
-
-
-            writer.WriteStartDocument(true);
-            writer.Formatting = System.Xml.Formatting.Indented;
-            writer.Indentation = 2;
-                 writer.WriteStartElement("refeicoes");
-           // writer.WriteStartElement("refeicao");
-
-            for (int i = 0; i <= Refeicao.listRestaurantes.Count - 1; i++)
-            {
-                createNode(Refeicao.listRestaurantes[i], Refeicao.listItems[i], Refeicao.listQuantidades[i], Refeicao.listCalorias[i],
-                    writer);
-            }
-            writer.WriteEndElement();
-            writer.WriteEndDocument();
-            writer.Close();
-            MessageBox.Show("Operação efetuada com sucesso ! ");
-            }
-
-            else
-            {
-                MessageBox.Show("Essa extensão não é suportada", "Erro", MessageBoxButtons.OK,
+                MessageBox.Show("A extensão do documento não é suportada", "Erro", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-
-            }
-            */
-
-
-
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+            textBox1.Clear();
         }
 
         private void label2_Click(object sender, EventArgs e)

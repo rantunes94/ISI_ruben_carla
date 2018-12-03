@@ -243,41 +243,23 @@ namespace eNutrideal_desktop.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/AddRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/AddRefeicaoResponse")]
         System.Threading.Tasks.Task AddRefeicaoAsync(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ConverteParaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/ConverteParaXMLResponse")]
-        void ConverteParaXML();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/addListRefeicoesToXML", ReplyAction="http://tempuri.org/IServiceENutrideal/addListRefeicoesToXMLResponse")]
+        void addListRefeicoesToXML();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ConverteParaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/ConverteParaXMLResponse")]
-        System.Threading.Tasks.Task ConverteParaXMLAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/addListRefeicoesToXML", ReplyAction="http://tempuri.org/IServiceENutrideal/addListRefeicoesToXMLResponse")]
+        System.Threading.Tasks.Task addListRefeicoesToXMLAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/recebeRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/recebeRefeicaoResponse")]
+        void recebeRefeicao(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/recebeRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/recebeRefeicaoResponse")]
+        System.Threading.Tasks.Task recebeRefeicaoAsync(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CriaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/CriaXMLResponse")]
         void CriaXML(string restaurante, string item, string quantidade, string calorias);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CriaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/CriaXMLResponse")]
         System.Threading.Tasks.Task CriaXMLAsync(string restaurante, string item, string quantidade, string calorias);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeItem", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeItemResponse")]
-        void RecebeItem(string item);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeItem", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeItemResponse")]
-        System.Threading.Tasks.Task RecebeItemAsync(string item);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeRestaurante", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeRestauranteResponse")]
-        void RecebeRestaurante(string restaurante);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeRestaurante", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeRestauranteResponse")]
-        System.Threading.Tasks.Task RecebeRestauranteAsync(string restaurante);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeCaloria", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeCaloriaResponse")]
-        void RecebeCaloria(string caloria);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeCaloria", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeCaloriaResponse")]
-        System.Threading.Tasks.Task RecebeCaloriaAsync(string caloria);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeQuantidade", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeQuantidadeResponse")]
-        void RecebeQuantidade(string quantidade);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/RecebeQuantidade", ReplyAction="http://tempuri.org/IServiceENutrideal/RecebeQuantidadeResponse")]
-        System.Threading.Tasks.Task RecebeQuantidadeAsync(string quantidade);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
         void ApagarRefeicaoPorItem(string item);
@@ -351,12 +333,20 @@ namespace eNutrideal_desktop.ServiceReference1 {
             return base.Channel.AddRefeicaoAsync(refeicao);
         }
         
-        public void ConverteParaXML() {
-            base.Channel.ConverteParaXML();
+        public void addListRefeicoesToXML() {
+            base.Channel.addListRefeicoesToXML();
         }
         
-        public System.Threading.Tasks.Task ConverteParaXMLAsync() {
-            return base.Channel.ConverteParaXMLAsync();
+        public System.Threading.Tasks.Task addListRefeicoesToXMLAsync() {
+            return base.Channel.addListRefeicoesToXMLAsync();
+        }
+        
+        public void recebeRefeicao(eNutrideal_desktop.ServiceReference1.Refeicao refeicao) {
+            base.Channel.recebeRefeicao(refeicao);
+        }
+        
+        public System.Threading.Tasks.Task recebeRefeicaoAsync(eNutrideal_desktop.ServiceReference1.Refeicao refeicao) {
+            return base.Channel.recebeRefeicaoAsync(refeicao);
         }
         
         public void CriaXML(string restaurante, string item, string quantidade, string calorias) {
@@ -365,38 +355,6 @@ namespace eNutrideal_desktop.ServiceReference1 {
         
         public System.Threading.Tasks.Task CriaXMLAsync(string restaurante, string item, string quantidade, string calorias) {
             return base.Channel.CriaXMLAsync(restaurante, item, quantidade, calorias);
-        }
-        
-        public void RecebeItem(string item) {
-            base.Channel.RecebeItem(item);
-        }
-        
-        public System.Threading.Tasks.Task RecebeItemAsync(string item) {
-            return base.Channel.RecebeItemAsync(item);
-        }
-        
-        public void RecebeRestaurante(string restaurante) {
-            base.Channel.RecebeRestaurante(restaurante);
-        }
-        
-        public System.Threading.Tasks.Task RecebeRestauranteAsync(string restaurante) {
-            return base.Channel.RecebeRestauranteAsync(restaurante);
-        }
-        
-        public void RecebeCaloria(string caloria) {
-            base.Channel.RecebeCaloria(caloria);
-        }
-        
-        public System.Threading.Tasks.Task RecebeCaloriaAsync(string caloria) {
-            return base.Channel.RecebeCaloriaAsync(caloria);
-        }
-        
-        public void RecebeQuantidade(string quantidade) {
-            base.Channel.RecebeQuantidade(quantidade);
-        }
-        
-        public System.Threading.Tasks.Task RecebeQuantidadeAsync(string quantidade) {
-            return base.Channel.RecebeQuantidadeAsync(quantidade);
         }
         
         public void ApagarRefeicaoPorItem(string item) {
