@@ -102,17 +102,37 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Calculadora">
+  <xs:element name="CalcularPesoIdeal">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/eNutridealWebservice" minOccurs="0" name="dados" nillable="true" type="q6:DadosPessoais" />
+        <xs:element minOccurs="0" name="idade" type="xs:int" />
+        <xs:element minOccurs="0" name="altura" type="xs:int" />
+        <xs:element minOccurs="0" name="genero" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CalculadoraResponse">
+  <xs:element name="CalcularPesoIdealResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CalculadoraResult" type="xs:double" />
+        <xs:element minOccurs="0" name="CalcularPesoIdealResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalcularCaloriasDia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idade" type="xs:int" />
+        <xs:element minOccurs="0" name="genero" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="altura" type="xs:int" />
+        <xs:element minOccurs="0" name="peso" type="xs:double" />
+        <xs:element minOccurs="0" name="nivelAtividade" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalcularCaloriasDiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalcularCaloriasDiaResult" type="xs:double" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

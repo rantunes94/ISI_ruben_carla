@@ -51,7 +51,14 @@ namespace eNutrideal_desktop
 
 
             ServiceENutridealClient client = new ServiceENutridealClient();
-            //client.Calculadoras()
+            double caloriasdia = client.CalcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
+
+            double pesoIdeal = client.CalcularPesoIdeal(idade, altura, genero);
+
+            textBox_calorias.Text = Convert.ToString(caloriasdia);
+
+            textBox_pesoIdeal.Text = Convert.ToString(pesoIdeal);
+
 
 
         }
@@ -73,6 +80,11 @@ namespace eNutrideal_desktop
         }
 
         private void comboBox_genero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_calorias_TextChanged(object sender, EventArgs e)
         {
 
         }

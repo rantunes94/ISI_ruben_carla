@@ -106,115 +106,6 @@ namespace eNutrideal_desktop.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DadosPessoais", Namespace="http://schemas.datacontract.org/2004/07/eNutridealWebservice")]
-    [System.SerializableAttribute()]
-    public partial class DadosPessoais : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AlturaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string GeneroField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdadeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NivelAtividadeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double PesoField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Altura {
-            get {
-                return this.AlturaField;
-            }
-            set {
-                if ((this.AlturaField.Equals(value) != true)) {
-                    this.AlturaField = value;
-                    this.RaisePropertyChanged("Altura");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Genero {
-            get {
-                return this.GeneroField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.GeneroField, value) != true)) {
-                    this.GeneroField = value;
-                    this.RaisePropertyChanged("Genero");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Idade {
-            get {
-                return this.IdadeField;
-            }
-            set {
-                if ((this.IdadeField.Equals(value) != true)) {
-                    this.IdadeField = value;
-                    this.RaisePropertyChanged("Idade");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NivelAtividade {
-            get {
-                return this.NivelAtividadeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NivelAtividadeField, value) != true)) {
-                    this.NivelAtividadeField = value;
-                    this.RaisePropertyChanged("NivelAtividade");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Peso {
-            get {
-                return this.PesoField;
-            }
-            set {
-                if ((this.PesoField.Equals(value) != true)) {
-                    this.PesoField = value;
-                    this.RaisePropertyChanged("Peso");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IServiceENutrideal")]
     public interface IServiceENutrideal {
@@ -267,11 +158,17 @@ namespace eNutrideal_desktop.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
         System.Threading.Tasks.Task ApagarRefeicaoPorItemAsync(string item);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/Calculadora", ReplyAction="http://tempuri.org/IServiceENutrideal/CalculadoraResponse")]
-        double Calculadora(eNutrideal_desktop.ServiceReference1.DadosPessoais dados);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse")]
+        double CalcularPesoIdeal(int idade, int altura, string genero);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/Calculadora", ReplyAction="http://tempuri.org/IServiceENutrideal/CalculadoraResponse")]
-        System.Threading.Tasks.Task<double> CalculadoraAsync(eNutrideal_desktop.ServiceReference1.DadosPessoais dados);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse")]
+        System.Threading.Tasks.Task<double> CalcularPesoIdealAsync(int idade, int altura, string genero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
+        double CalcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
+        System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -365,12 +262,20 @@ namespace eNutrideal_desktop.ServiceReference1 {
             return base.Channel.ApagarRefeicaoPorItemAsync(item);
         }
         
-        public double Calculadora(eNutrideal_desktop.ServiceReference1.DadosPessoais dados) {
-            return base.Channel.Calculadora(dados);
+        public double CalcularPesoIdeal(int idade, int altura, string genero) {
+            return base.Channel.CalcularPesoIdeal(idade, altura, genero);
         }
         
-        public System.Threading.Tasks.Task<double> CalculadoraAsync(eNutrideal_desktop.ServiceReference1.DadosPessoais dados) {
-            return base.Channel.CalculadoraAsync(dados);
+        public System.Threading.Tasks.Task<double> CalcularPesoIdealAsync(int idade, int altura, string genero) {
+            return base.Channel.CalcularPesoIdealAsync(idade, altura, genero);
+        }
+        
+        public double CalcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade) {
+            return base.Channel.CalcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
+        }
+        
+        public System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade) {
+            return base.Channel.CalcularCaloriasDiaAsync(idade, genero, altura, peso, nivelAtividade);
         }
     }
 }

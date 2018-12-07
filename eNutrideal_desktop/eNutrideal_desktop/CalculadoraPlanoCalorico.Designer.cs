@@ -43,11 +43,11 @@
             this.comboBox_atividadeFisica = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox_resultado = new System.Windows.Forms.TextBox();
+            this.textBox_pesoIdeal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_calorias = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_peso)).BeginInit();
@@ -234,12 +234,12 @@
             this.label8.TabIndex = 31;
             this.label8.Text = "O seu peso ideal em kg é:";
             // 
-            // textBox_resultado
+            // textBox_pesoIdeal
             // 
-            this.textBox_resultado.Location = new System.Drawing.Point(268, 421);
-            this.textBox_resultado.Name = "textBox_resultado";
-            this.textBox_resultado.Size = new System.Drawing.Size(62, 20);
-            this.textBox_resultado.TabIndex = 30;
+            this.textBox_pesoIdeal.Location = new System.Drawing.Point(268, 421);
+            this.textBox_pesoIdeal.Name = "textBox_pesoIdeal";
+            this.textBox_pesoIdeal.Size = new System.Drawing.Size(62, 20);
+            this.textBox_pesoIdeal.TabIndex = 30;
             // 
             // label9
             // 
@@ -273,12 +273,13 @@
             this.label11.TabIndex = 34;
             this.label11.Text = "Para obter o peso ideal deverá consumir ";
             // 
-            // textBox1
+            // textBox_calorias
             // 
-            this.textBox1.Location = new System.Drawing.Point(365, 492);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 20);
-            this.textBox1.TabIndex = 36;
+            this.textBox_calorias.Location = new System.Drawing.Point(365, 492);
+            this.textBox_calorias.Name = "textBox_calorias";
+            this.textBox_calorias.Size = new System.Drawing.Size(62, 20);
+            this.textBox_calorias.TabIndex = 36;
+            this.textBox_calorias.TextChanged += new System.EventHandler(this.textBox_calorias_TextChanged);
             // 
             // textBox2
             // 
@@ -304,13 +305,13 @@
             this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_calorias);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox_resultado);
+            this.Controls.Add(this.textBox_pesoIdeal);
             this.Controls.Add(this.numericUpDown_peso);
             this.Controls.Add(this.numericUpDown_altura);
             this.Controls.Add(this.numericUpDown_idade);
@@ -351,11 +352,11 @@
         private System.Windows.Forms.ComboBox comboBox_atividadeFisica;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox_resultado;
+        private System.Windows.Forms.TextBox textBox_pesoIdeal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_calorias;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label12;
     }
