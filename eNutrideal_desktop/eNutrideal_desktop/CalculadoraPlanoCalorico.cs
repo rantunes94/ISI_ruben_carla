@@ -44,7 +44,6 @@ namespace eNutrideal_desktop
             double peso = Convert.ToDouble(numericUpDown_peso.Value);
             int altura = Convert.ToInt32(numericUpDown_altura.Value);
             string genero = comboBox_genero.Text;
-
             string nivelAtividade = comboBox_atividadeFisica.Text;
 
 
@@ -52,12 +51,16 @@ namespace eNutrideal_desktop
 
             ServiceENutridealClient client = new ServiceENutridealClient();
             double caloriasdia = client.CalcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
-
             double pesoIdeal = client.CalcularPesoIdeal(idade, altura, genero);
 
-            textBox_calorias.Text = Convert.ToString(caloriasdia);
+            string planoCalorico= client.CalcularPlanoCalorico(peso, pesoIdeal, caloriasdia);
+           
 
+
+            textBox_calorias.Text = Convert.ToString(caloriasdia);
             textBox_pesoIdeal.Text = Convert.ToString(pesoIdeal);
+            label_resultado.Text = planoCalorico;
+
 
 
 
@@ -85,6 +88,11 @@ namespace eNutrideal_desktop
         }
 
         private void textBox_calorias_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CalculadoraPlanoCalorico_Load(object sender, EventArgs e)
         {
 
         }

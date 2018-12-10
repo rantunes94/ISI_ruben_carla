@@ -136,4 +136,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CalcularPlanoCalorico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="peso" type="xs:double" />
+        <xs:element minOccurs="0" name="pesoIdeal" type="xs:double" />
+        <xs:element minOccurs="0" name="caloriasDiaParaManter" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalcularPlanoCaloricoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalcularPlanoCaloricoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

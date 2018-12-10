@@ -45,11 +45,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_pesoIdeal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox_calorias = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label_resultado = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_peso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_altura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_idade)).BeginInit();
@@ -71,7 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(71, 115);
+            this.label1.Location = new System.Drawing.Point(71, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 17;
@@ -81,7 +83,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(71, 152);
+            this.label5.Location = new System.Drawing.Point(71, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 20;
@@ -91,7 +93,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(71, 186);
+            this.label3.Location = new System.Drawing.Point(71, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 19;
@@ -101,7 +103,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(71, 229);
+            this.label4.Location = new System.Drawing.Point(71, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 22;
@@ -111,7 +113,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 265);
+            this.label2.Location = new System.Drawing.Point(71, 244);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 20);
             this.label2.TabIndex = 21;
@@ -126,7 +128,7 @@
             0,
             0,
             196608});
-            this.numericUpDown_peso.Location = new System.Drawing.Point(258, 225);
+            this.numericUpDown_peso.Location = new System.Drawing.Point(258, 204);
             this.numericUpDown_peso.Maximum = new decimal(new int[] {
             200,
             0,
@@ -139,7 +141,7 @@
             // numericUpDown_altura
             // 
             this.numericUpDown_altura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.numericUpDown_altura.Location = new System.Drawing.Point(258, 185);
+            this.numericUpDown_altura.Location = new System.Drawing.Point(258, 164);
             this.numericUpDown_altura.Maximum = new decimal(new int[] {
             250,
             0,
@@ -152,7 +154,7 @@
             // numericUpDown_idade
             // 
             this.numericUpDown_idade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown_idade.Location = new System.Drawing.Point(258, 114);
+            this.numericUpDown_idade.Location = new System.Drawing.Point(258, 93);
             this.numericUpDown_idade.Maximum = new decimal(new int[] {
             78,
             0,
@@ -176,7 +178,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(192, 310);
+            this.button1.Location = new System.Drawing.Point(861, 592);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 27);
             this.button1.TabIndex = 26;
@@ -187,7 +189,7 @@
             // button_calcular
             // 
             this.button_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_calcular.Location = new System.Drawing.Point(77, 310);
+            this.button_calcular.Location = new System.Drawing.Point(77, 289);
             this.button_calcular.Name = "button_calcular";
             this.button_calcular.Size = new System.Drawing.Size(84, 27);
             this.button_calcular.TabIndex = 25;
@@ -199,7 +201,7 @@
             // 
             this.comboBox_genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_genero.FormattingEnabled = true;
-            this.comboBox_genero.Location = new System.Drawing.Point(258, 147);
+            this.comboBox_genero.Location = new System.Drawing.Point(258, 126);
             this.comboBox_genero.Name = "comboBox_genero";
             this.comboBox_genero.Size = new System.Drawing.Size(121, 28);
             this.comboBox_genero.TabIndex = 24;
@@ -209,7 +211,7 @@
             // 
             this.comboBox_atividadeFisica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_atividadeFisica.FormattingEnabled = true;
-            this.comboBox_atividadeFisica.Location = new System.Drawing.Point(258, 262);
+            this.comboBox_atividadeFisica.Location = new System.Drawing.Point(258, 241);
             this.comboBox_atividadeFisica.Name = "comboBox_atividadeFisica";
             this.comboBox_atividadeFisica.Size = new System.Drawing.Size(223, 28);
             this.comboBox_atividadeFisica.TabIndex = 23;
@@ -218,7 +220,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 453);
+            this.label7.Location = new System.Drawing.Point(86, 417);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(200, 13);
             this.label7.TabIndex = 32;
@@ -228,7 +230,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(71, 421);
+            this.label8.Location = new System.Drawing.Point(80, 394);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(191, 20);
             this.label8.TabIndex = 31;
@@ -236,7 +238,7 @@
             // 
             // textBox_pesoIdeal
             // 
-            this.textBox_pesoIdeal.Location = new System.Drawing.Point(268, 421);
+            this.textBox_pesoIdeal.Location = new System.Drawing.Point(282, 394);
             this.textBox_pesoIdeal.Name = "textBox_pesoIdeal";
             this.textBox_pesoIdeal.Size = new System.Drawing.Size(62, 20);
             this.textBox_pesoIdeal.TabIndex = 30;
@@ -246,67 +248,95 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label9.Location = new System.Drawing.Point(346, 372);
+            this.label9.Location = new System.Drawing.Point(351, 328);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 20);
             this.label9.TabIndex = 33;
             this.label9.Text = "Resultados";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(433, 492);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(174, 20);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "calorias por dia durante";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(73, 493);
+            this.label11.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label11.Location = new System.Drawing.Point(78, 538);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(296, 20);
+            this.label11.Size = new System.Drawing.Size(114, 20);
             this.label11.TabIndex = 34;
-            this.label11.Text = "Para obter o peso ideal deverá consumir ";
+            this.label11.Text = "Plano Calórico:";
             // 
             // textBox_calorias
             // 
-            this.textBox_calorias.Location = new System.Drawing.Point(365, 492);
+            this.textBox_calorias.Location = new System.Drawing.Point(386, 492);
             this.textBox_calorias.Name = "textBox_calorias";
             this.textBox_calorias.Size = new System.Drawing.Size(62, 20);
             this.textBox_calorias.TabIndex = 36;
             this.textBox_calorias.TextChanged += new System.EventHandler(this.textBox_calorias_TextChanged);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(604, 492);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(62, 20);
-            this.textBox2.TabIndex = 37;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(672, 493);
+            this.label12.Location = new System.Drawing.Point(454, 492);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 20);
+            this.label12.Size = new System.Drawing.Size(119, 20);
             this.label12.TabIndex = 38;
-            this.label12.Text = "semanas.";
+            this.label12.Text = "calorias por dia.";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(78, 490);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(302, 20);
+            this.label13.TabIndex = 55;
+            this.label13.Text = "Para manter o seu peso deverá consumir:";
+            // 
+            // label_resultado
+            // 
+            this.label_resultado.AutoSize = true;
+            this.label_resultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_resultado.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label_resultado.Location = new System.Drawing.Point(83, 558);
+            this.label_resultado.Name = "label_resultado";
+            this.label_resultado.Size = new System.Drawing.Size(0, 20);
+            this.label_resultado.TabIndex = 62;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label10.Location = new System.Drawing.Point(78, 456);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(180, 20);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "Calculadora de Calorias:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label14.Location = new System.Drawing.Point(83, 362);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(195, 20);
+            this.label14.TabIndex = 66;
+            this.label14.Text = "Calculadora de peso ideal:";
             // 
             // CalculadoraPlanoCalorico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 562);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox_calorias);
+            this.ClientSize = new System.Drawing.Size(986, 631);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label_resultado);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.textBox_calorias);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -327,6 +357,7 @@
             this.Controls.Add(this.label6);
             this.Name = "CalculadoraPlanoCalorico";
             this.Text = "CalculadoraPlanoCalorico";
+            this.Load += new System.EventHandler(this.CalculadoraPlanoCalorico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_peso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_altura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_idade)).EndInit();
@@ -354,10 +385,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_pesoIdeal;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox_calorias;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label_resultado;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label14;
     }
 }

@@ -169,6 +169,12 @@ namespace eNutrideal_desktop.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
         System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPlanoCalorico", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPlanoCaloricoResponse")]
+        string CalcularPlanoCalorico(double peso, double pesoIdeal, double caloriasDiaParaManter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPlanoCalorico", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPlanoCaloricoResponse")]
+        System.Threading.Tasks.Task<string> CalcularPlanoCaloricoAsync(double peso, double pesoIdeal, double caloriasDiaParaManter);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -276,6 +282,14 @@ namespace eNutrideal_desktop.ServiceReference1 {
         
         public System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade) {
             return base.Channel.CalcularCaloriasDiaAsync(idade, genero, altura, peso, nivelAtividade);
+        }
+        
+        public string CalcularPlanoCalorico(double peso, double pesoIdeal, double caloriasDiaParaManter) {
+            return base.Channel.CalcularPlanoCalorico(peso, pesoIdeal, caloriasDiaParaManter);
+        }
+        
+        public System.Threading.Tasks.Task<string> CalcularPlanoCaloricoAsync(double peso, double pesoIdeal, double caloriasDiaParaManter) {
+            return base.Channel.CalcularPlanoCaloricoAsync(peso, pesoIdeal, caloriasDiaParaManter);
         }
     }
 }

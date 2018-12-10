@@ -67,6 +67,12 @@
   <wsdl:message name="IServiceENutrideal_CalcularCaloriasDia_OutputMessage">
     <wsdl:part name="parameters" element="tns:CalcularCaloriasDiaResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceENutrideal_CalcularPlanoCalorico_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularPlanoCalorico" />
+  </wsdl:message>
+  <wsdl:message name="IServiceENutrideal_CalcularPlanoCalorico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcularPlanoCaloricoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServiceENutrideal">
     <wsdl:operation name="GetRefeicao">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/GetRefeicao" message="tns:IServiceENutrideal_GetRefeicao_InputMessage" />
@@ -107,6 +113,10 @@
     <wsdl:operation name="CalcularCaloriasDia">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia" message="tns:IServiceENutrideal_CalcularCaloriasDia_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse" message="tns:IServiceENutrideal_CalcularCaloriasDia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularPlanoCalorico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularPlanoCalorico" message="tns:IServiceENutrideal_CalcularPlanoCalorico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceENutrideal/CalcularPlanoCaloricoResponse" message="tns:IServiceENutrideal_CalcularPlanoCalorico_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceENutrideal" type="tns:IServiceENutrideal">
@@ -194,6 +204,15 @@
     </wsdl:operation>
     <wsdl:operation name="CalcularCaloriasDia">
       <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularPlanoCalorico">
+      <soap:operation soapAction="http://tempuri.org/IServiceENutrideal/CalcularPlanoCalorico" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
