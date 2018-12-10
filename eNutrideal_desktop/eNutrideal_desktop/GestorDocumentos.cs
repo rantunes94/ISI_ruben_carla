@@ -156,13 +156,17 @@ namespace eNutrideal_desktop
                                         client.recebeRefeicao(novaRefeicao);
                                         //
                                         richTextBox1.Text = richTextBox1.Text + "\n" + novaRefeicao.Restaurante + "\t" + novaRefeicao.Item + "\t" + novaRefeicao.Quantidade + "\t" + novaRefeicao.Calorias;
-                                    }
+                                    }  
+                                  sr2.Close();
                                 }
+                                
                                 //apagar o ficheiro temporario que criei à pouco
                                 File.Delete(caminhoFicheiro);
                                 //FIM de  para o ficherio txt2
                             }
+
                         }
+                        sr.Close();
                     }
                 }
             }

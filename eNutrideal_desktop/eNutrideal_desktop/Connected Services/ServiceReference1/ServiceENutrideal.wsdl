@@ -204,7 +204,7 @@
   </wsdl:binding>
   <wsdl:service name="ServiceENutrideal">
     <wsdl:port name="BasicHttpBinding_IServiceENutrideal" binding="tns:BasicHttpBinding_IServiceENutrideal">
-      <soap:address location="http://localhost:53005/ServiceENutrideal.svc" />
+      <soap:address location="http://localhost:53005/ServiceENutrideal.svc/soap" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
