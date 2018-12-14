@@ -37,6 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox_tipoPesquisa = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -127,11 +128,23 @@
             this.comboBox_tipoPesquisa.TabIndex = 22;
             this.comboBox_tipoPesquisa.SelectedIndexChanged += new System.EventHandler(this.comboBox_tipoPesquisa_SelectedIndexChanged);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(603, 491);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(105, 33);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "Limpar Tudo";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // VisualizadorDePesquisas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 536);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox_tipoPesquisa);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -160,5 +173,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox_tipoPesquisa;
+        private System.Windows.Forms.Button button4;
     }
 }

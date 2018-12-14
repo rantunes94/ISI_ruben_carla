@@ -98,5 +98,11 @@ namespace eNutrideal_desktop
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            richTextBox1.Clear();
+        }
     }
 }

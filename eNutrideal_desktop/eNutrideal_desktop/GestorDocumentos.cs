@@ -185,10 +185,16 @@ namespace eNutrideal_desktop
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+            textBox1.Clear();
+            richTextBox1.Clear();
+
             ///// Botão para o server adicional a informação ao refeicoes.xml
             ServiceENutridealClient client = new ServiceENutridealClient();
             if (extension.Equals(".txt") || extension.Equals(".json"))
             {
+                
+              
                 client.addListRefeicoesToXML();
                 MessageBox.Show("Operação efetuada com sucesso!");
             }
