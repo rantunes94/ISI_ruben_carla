@@ -27,9 +27,9 @@ namespace eNutrideal_desktop
         private void button1_Click(object sender, EventArgs e)
         {
 
-            
 
-            ServiceENutridealClient client = new ServiceENutridealClient();
+
+            ServiceClient client = new ServiceClient();
             string refeicao = textBox1.Text;
             if (textBox1.Text != null && !string.IsNullOrWhiteSpace(textBox1.Text))      
             {

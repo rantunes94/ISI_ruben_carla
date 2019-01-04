@@ -58,8 +58,8 @@ namespace eNutrideal_desktop
             int altura = Convert.ToInt32(numericUpDown_altura.Value);
             string genero = comboBox_genero.Text;
 
-        
-            ServiceENutridealClient client = new ServiceENutridealClient();
+
+            ServiceClient client = new ServiceClient();
             //double resultado_final = client.CalcularPesoIdeal(idade, altura, genero);
             //textBox_resultado.Text = Convert.ToString(resultado_final);
 

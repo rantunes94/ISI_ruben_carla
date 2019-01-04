@@ -31,7 +31,7 @@ namespace eNutrideal_desktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ServiceENutridealClient client = new ServiceENutridealClient();
+            ServiceClient client = new ServiceClient();
 
             string restaurante = textBox1.Text;
             string item = textBox2.Text;

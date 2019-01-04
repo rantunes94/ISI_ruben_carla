@@ -71,7 +71,7 @@ namespace eNutrideal_desktop
            
             string nivelAtividade = comboBox_atividadeFisica.Text;
 
-            ServiceENutridealClient client = new ServiceENutridealClient();
+            ServiceClient client = new ServiceClient();
             //double resultado_final = client.CalcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
             //textBox_resultado.Text = Convert.ToString(resultado_final);
 

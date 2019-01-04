@@ -46,7 +46,7 @@ namespace eNutrideal_desktop
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ServiceENutridealClient client = new ServiceENutridealClient();
+            ServiceClient client = new ServiceClient();
             string tipoPesquisa = comboBox_tipoPesquisa.Text;
             string pesquisa = textBox1.Text;
 
@@ -80,7 +80,7 @@ namespace eNutrideal_desktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ServiceENutridealClient client = new ServiceENutridealClient();
+            ServiceClient client = new ServiceClient();
 
             ServiceReference1.Refeicao[] refeicoes = client.GetRefeicao();
 

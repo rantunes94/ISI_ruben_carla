@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f890ee48-b6d1-4855-9449-0d9262fbcaf4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="47ce6cee-50cd-4208-b46a-d18b96c426ef" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:53005/ServiceENutrideal.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://wcfservicenutrideal.apphb.com/Service.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServiceENutrideal.disco" MetadataType="Disco" ID="117f5530-f3ef-40c4-b591-50869ac9a9a2" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?disco" />
-    <MetadataFile FileName="ServiceENutrideal.xsd" MetadataType="Schema" ID="fd5a9634-6270-40fc-897e-757d0cbf8c06" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServiceENutrideal.wsdl" MetadataType="Wsdl" ID="35271380-f828-4f64-81b5-a730e6232f31" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?wsdl" />
-    <MetadataFile FileName="ServiceENutrideal1.xsd" MetadataType="Schema" ID="99f9738e-732c-4687-9636-e6428f0577ec" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServiceENutrideal2.xsd" MetadataType="Schema" ID="31766015-0994-40b2-8cce-2deaa2a8cccc" SourceId="1" SourceUrl="http://localhost:53005/ServiceENutrideal.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="4882ee5b-6949-4e88-97de-a2e988a6f19b" SourceId="1" SourceUrl="http://wcfservicenutrideal.apphb.com/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="638f60b3-cb0d-40a5-896f-a665c9ead90e" SourceId="1" SourceUrl="http://wcfservicenutrideal.apphb.com/Service.svc?wsdl" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="a0a28025-8571-47b2-b8a8-2e114bf5ec2d" SourceId="1" SourceUrl="http://wcfservicenutrideal.apphb.com/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="7465753b-0e83-492e-82b5-55ead6a7c65f" SourceId="1" SourceUrl="http://wcfservicenutrideal.apphb.com/Service.svc?disco" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="135f4042-5886-4288-be95-1e2fcf66bf06" SourceId="1" SourceUrl="http://wcfservicenutrideal.apphb.com/Service.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -35,7 +35,9 @@ namespace eNutrideal_desktop
         {
 
 
-            ServiceENutridealClient client = new ServiceENutridealClient();
+            //ServiceENutridealClient client = new ServiceENutridealClient();
+            ServiceClient client = new ServiceClient();
+            
             openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "txt and json files (*.txt / *.json)|*.txt;*.json";
             // "json files (*.json)|*.json";
@@ -190,7 +192,8 @@ namespace eNutrideal_desktop
             richTextBox1.Clear();
 
             ///// Botão para o server adicional a informação ao refeicoes.xml
-            ServiceENutridealClient client = new ServiceENutridealClient();
+            ServiceClient client = new ServiceClient();
+            
             if (extension.Equals(".txt") || extension.Equals(".json"))
             {
                 

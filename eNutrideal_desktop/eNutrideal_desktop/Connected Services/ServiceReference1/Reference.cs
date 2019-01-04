@@ -15,7 +15,7 @@ namespace eNutrideal_desktop.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Refeicao", Namespace="http://schemas.datacontract.org/2004/07/eNutridealWebservice")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Refeicao", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceNutrideal")]
     [System.SerializableAttribute()]
     public partial class Refeicao : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -107,100 +107,100 @@ namespace eNutrideal_desktop.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IServiceENutrideal")]
-    public interface IServiceENutrideal {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService")]
+    public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRefeicao", ReplyAction="http://tempuri.org/IService/GetRefeicaoResponse")]
         eNutrideal_desktop.ServiceReference1.Refeicao[] GetRefeicao();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRefeicao", ReplyAction="http://tempuri.org/IService/GetRefeicaoResponse")]
         System.Threading.Tasks.Task<eNutrideal_desktop.ServiceReference1.Refeicao[]> GetRefeicaoAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorRestaurante", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorRestauranteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRefeicaoPorRestaurante", ReplyAction="http://tempuri.org/IService/GetRefeicaoPorRestauranteResponse")]
         eNutrideal_desktop.ServiceReference1.Refeicao[] GetRefeicaoPorRestaurante(string restaurante);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorRestaurante", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorRestauranteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRefeicaoPorRestaurante", ReplyAction="http://tempuri.org/IService/GetRefeicaoPorRestauranteResponse")]
         System.Threading.Tasks.Task<eNutrideal_desktop.ServiceReference1.Refeicao[]> GetRefeicaoPorRestauranteAsync(string restaurante);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorItemResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRefeicaoPorItem", ReplyAction="http://tempuri.org/IService/GetRefeicaoPorItemResponse")]
         eNutrideal_desktop.ServiceReference1.Refeicao[] GetRefeicaoPorItem(string item);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/GetRefeicaoPorItemResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRefeicaoPorItem", ReplyAction="http://tempuri.org/IService/GetRefeicaoPorItemResponse")]
         System.Threading.Tasks.Task<eNutrideal_desktop.ServiceReference1.Refeicao[]> GetRefeicaoPorItemAsync(string item);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/AddRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/AddRefeicaoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddRefeicao", ReplyAction="http://tempuri.org/IService/AddRefeicaoResponse")]
         void AddRefeicao(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/AddRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/AddRefeicaoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddRefeicao", ReplyAction="http://tempuri.org/IService/AddRefeicaoResponse")]
         System.Threading.Tasks.Task AddRefeicaoAsync(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/addListRefeicoesToXML", ReplyAction="http://tempuri.org/IServiceENutrideal/addListRefeicoesToXMLResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/addListRefeicoesToXML", ReplyAction="http://tempuri.org/IService/addListRefeicoesToXMLResponse")]
         void addListRefeicoesToXML();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/addListRefeicoesToXML", ReplyAction="http://tempuri.org/IServiceENutrideal/addListRefeicoesToXMLResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/addListRefeicoesToXML", ReplyAction="http://tempuri.org/IService/addListRefeicoesToXMLResponse")]
         System.Threading.Tasks.Task addListRefeicoesToXMLAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/recebeRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/recebeRefeicaoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/recebeRefeicao", ReplyAction="http://tempuri.org/IService/recebeRefeicaoResponse")]
         void recebeRefeicao(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/recebeRefeicao", ReplyAction="http://tempuri.org/IServiceENutrideal/recebeRefeicaoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/recebeRefeicao", ReplyAction="http://tempuri.org/IService/recebeRefeicaoResponse")]
         System.Threading.Tasks.Task recebeRefeicaoAsync(eNutrideal_desktop.ServiceReference1.Refeicao refeicao);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CriaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/CriaXMLResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CriaXML", ReplyAction="http://tempuri.org/IService/CriaXMLResponse")]
         void CriaXML(string restaurante, string item, string quantidade, string calorias);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CriaXML", ReplyAction="http://tempuri.org/IServiceENutrideal/CriaXMLResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CriaXML", ReplyAction="http://tempuri.org/IService/CriaXMLResponse")]
         System.Threading.Tasks.Task CriaXMLAsync(string restaurante, string item, string quantidade, string calorias);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IService/ApagarRefeicaoPorItemResponse")]
         void ApagarRefeicaoPorItem(string item);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IServiceENutrideal/ApagarRefeicaoPorItemResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ApagarRefeicaoPorItem", ReplyAction="http://tempuri.org/IService/ApagarRefeicaoPorItemResponse")]
         System.Threading.Tasks.Task ApagarRefeicaoPorItemAsync(string item);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IService/CalcularPesoIdealResponse")]
         double CalcularPesoIdeal(int idade, int altura, string genero);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPesoIdealResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CalcularPesoIdeal", ReplyAction="http://tempuri.org/IService/CalcularPesoIdealResponse")]
         System.Threading.Tasks.Task<double> CalcularPesoIdealAsync(int idade, int altura, string genero);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IService/CalcularCaloriasDiaResponse")]
         double CalcularCaloriasDia(int idade, string genero, int altura, double peso, string nivelAtividade);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularCaloriasDiaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CalcularCaloriasDia", ReplyAction="http://tempuri.org/IService/CalcularCaloriasDiaResponse")]
         System.Threading.Tasks.Task<double> CalcularCaloriasDiaAsync(int idade, string genero, int altura, double peso, string nivelAtividade);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPlanoCalorico", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPlanoCaloricoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CalcularPlanoCalorico", ReplyAction="http://tempuri.org/IService/CalcularPlanoCaloricoResponse")]
         string CalcularPlanoCalorico(double peso, double pesoIdeal, double caloriasDiaParaManter);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceENutrideal/CalcularPlanoCalorico", ReplyAction="http://tempuri.org/IServiceENutrideal/CalcularPlanoCaloricoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CalcularPlanoCalorico", ReplyAction="http://tempuri.org/IService/CalcularPlanoCaloricoResponse")]
         System.Threading.Tasks.Task<string> CalcularPlanoCaloricoAsync(double peso, double pesoIdeal, double caloriasDiaParaManter);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceENutridealChannel : eNutrideal_desktop.ServiceReference1.IServiceENutrideal, System.ServiceModel.IClientChannel {
+    public interface IServiceChannel : eNutrideal_desktop.ServiceReference1.IService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceENutridealClient : System.ServiceModel.ClientBase<eNutrideal_desktop.ServiceReference1.IServiceENutrideal>, eNutrideal_desktop.ServiceReference1.IServiceENutrideal {
+    public partial class ServiceClient : System.ServiceModel.ClientBase<eNutrideal_desktop.ServiceReference1.IService>, eNutrideal_desktop.ServiceReference1.IService {
         
-        public ServiceENutridealClient() {
+        public ServiceClient() {
         }
         
-        public ServiceENutridealClient(string endpointConfigurationName) : 
+        public ServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ServiceENutridealClient(string endpointConfigurationName, string remoteAddress) : 
+        public ServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServiceENutridealClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServiceENutridealClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         

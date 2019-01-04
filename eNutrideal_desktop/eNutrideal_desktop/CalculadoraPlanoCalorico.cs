@@ -49,7 +49,7 @@ namespace eNutrideal_desktop
 
 
 
-            ServiceENutridealClient client = new ServiceENutridealClient();
+            ServiceClient client = new ServiceClient();
             double caloriasdia = client.CalcularCaloriasDia(idade, genero, altura, peso, nivelAtividade);
             double pesoIdeal = client.CalcularPesoIdeal(idade, altura, genero);
 

@@ -167,14 +167,14 @@
     <None Include="Connected Services\ServiceReference1\eNutrideal_desktop.ServiceReference1.Refeicao.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\ServiceENutrideal.wsdl" />
-    <None Include="Connected Services\ServiceReference1\ServiceENutrideal.xsd">
+    <None Include="Connected Services\ServiceReference1\Service.wsdl" />
+    <None Include="Connected Services\ServiceReference1\Service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\ServiceENutrideal1.xsd">
+    <None Include="Connected Services\ServiceReference1\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\ServiceENutrideal2.xsd">
+    <None Include="Connected Services\ServiceReference1\Service2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -212,7 +212,7 @@
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\ServiceENutrideal.disco" />
+    <None Include="Connected Services\ServiceReference1\Service.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
